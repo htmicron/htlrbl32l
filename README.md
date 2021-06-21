@@ -1,7 +1,7 @@
 # iMCP HTLRBL32L - New System-in-Package LoRa® e Bluetooth®
 
 <div align="center">
-  <img src='.gitkeep/htlrbl32l_view.png' id="topology" height="50%" width="50%"/>
+  <img src='.gitkeep/htlrbl32l_view.png' id="topology" height="35%" width="35%"/>
 </div>
 
 <br/>
