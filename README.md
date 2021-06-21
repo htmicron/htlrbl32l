@@ -1,4 +1,4 @@
-# iMCP HTLRBL32L - New System-in-Package LoRa® e Bluetooth®
+# iMCP HTLRBL32L - New System-in-Package LoRa® & Bluetooth Low Energy®
 
 <div align="center">
   <img src='.gitkeep/htlrbl32l_view.png' id="topology" height="35%" width="35%"/>
