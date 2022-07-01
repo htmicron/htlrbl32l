@@ -24,9 +24,9 @@ Register your interest in iMCP - HTLRBL32L in the form: https://forms.office.com
 
 <br/>
 
-* [iMCP HTLRBL32L - Databrief]()
-* [iMCP HTLRBL32L - Flyer]()
-* [IPv6 over LoRaWAN with Acklio SCH - iMCP HTLRBL32L]()
+* [iMCP HTLRBL32L - Databrief](https://github.com/htmicron/htlrbl32l/blob/LoRWAN_Expo2022/Documents/Data%20Brief.pdf)
+* [iMCP HTLRBL32L - Flyer](https://github.com/htmicron/htlrbl32l/blob/LoRWAN_Expo2022/Documents/HT%20Micron_iMCP%20HTLRBL32L-SiPLoRaBluetooth.pdf)
+* [IPv6 over LoRaWAN with Acklio SCH - iMCP HTLRBL32L](https://github.com/htmicron/htlrbl32l/blob/LoRWAN_Expo2022/Documents/ACKLIO-SCHConHT%20MicroniMCPHTLRBL32L.pdf)
 
 <br/>
 <hr>
