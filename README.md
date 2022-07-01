@@ -12,6 +12,22 @@ The release of System-in-package iMCP HTLRBL32L with LoRa® & Bluetooth® will t
 
 Register your interest in iMCP - HTLRBL32L in the form: https://forms.office.com/r/SkE4svVegb
 
+
+<br/>
+
+# LoRaWAN World Expo 2022
+
+<div align="center">
+  <img src='.gitkeep/expo.jpg' id="topology" height="100%" width="100%"/>
+</div>
+
+
+<br/>
+
+* [iMCP HTLRBL32L - Databrief]()
+* [iMCP HTLRBL32L - Flyer]()
+* [IPv6 over LoRaWAN with Acklio SCH - iMCP HTLRBL32L]()
+
 <br/>
 <hr>
 
