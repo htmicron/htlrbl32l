@@ -4,7 +4,7 @@
 
 ## How to Clone this Branch
 
-To clone this branch:
+Command to clone this branch:
 ```
 git clone --single-branch --branch SDK git@github.com:htmicron/htlrbl32l.git
 ```
