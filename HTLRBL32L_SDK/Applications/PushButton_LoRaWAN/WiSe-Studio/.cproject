@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.debug.325697756">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.debug.325697756" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.debug.325697756" name="Debug" parent="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.debug" postbuildStep="arm-none-eabi-objcopy -O binary ${BuildArtifactFileBaseName}.elf ${BuildArtifactFileBaseName}.bin">
+					<folderInfo id="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.debug.325697756." name="/" resourcePath="">
+						<toolChain id="fr.ac6.ide.wise.managedbuild.toolchain.exe.debug.429813054" name="WiSE GCC Toolchain" superClass="fr.ac6.ide.wise.managedbuild.toolchain.exe.debug">
+							<option id="fr.ac6.ide.wise.managedbuild.option.optimization.level.1278344337" name="Optimization level" superClass="fr.ac6.ide.wise.managedbuild.option.optimization.level" useByScannerDiscovery="true" value="fr.ac6.ide.wise.managedbuild.option.optimization.level.size" valueType="enumerated"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.debugging.level.892754565" name="Debugging level" superClass="fr.ac6.ide.wise.managedbuild.option.debugging.level" useByScannerDiscovery="true" value="fr.ac6.ide.wise.managedbuild.option.debugging.level.max" valueType="enumerated"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.target.board.496847674" name="Board" superClass="fr.ac6.ide.wise.managedbuild.option.target.board" useByScannerDiscovery="false" value="SIP_HTLRBL32L" valueType="string"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.target.soc.1273520357" name="SOC" superClass="fr.ac6.ide.wise.managedbuild.option.target.soc" useByScannerDiscovery="false" value="BlueNRG-355VC" valueType="string"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.target.series.1340330749" name="Series" superClass="fr.ac6.ide.wise.managedbuild.option.target.series" useByScannerDiscovery="true" value="BlueNRG-LP" valueType="string"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.target.fpu.952875955" name="Floating point unit" superClass="fr.ac6.ide.wise.managedbuild.option.target.fpu" useByScannerDiscovery="true"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.optimization.other.1647746534" name="Other flags" superClass="fr.ac6.ide.wise.managedbuild.option.optimization.other" useByScannerDiscovery="true" value="-ffunction-sections -fdata-sections" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="fr.ac6.ide.wise.managedbuild.targetPlatform.1399602508" isAbstract="false" osList="all" superClass="fr.ac6.ide.wise.managedbuild.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/HTLRBL32L-PushButton_LoRaWAN}/Debug" id="fr.ac6.ide.wise.managedbuild.builder.361484842" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="WiSE Builder" superClass="fr.ac6.ide.wise.managedbuild.builder"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.c.compiler.1682903420" name="GCC C Compiler" superClass="fr.ac6.ide.wise.managedbuild.tool.c.compiler">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="fr.ac6.ide.wise.managedbuild.option.c.compiler.defs.1858817156" name="Defined symbols (-D)" superClass="fr.ac6.ide.wise.managedbuild.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="DEFAULT_REGION=5"/>
+									<listOptionValue builtIn="false" value="PUSH_BUTTON_APP"/>
+									<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+									<listOptionValue builtIn="false" value="CONFIG_HW_HSE_TUNE=32"/>
+									<listOptionValue builtIn="false" value="CONFIG_HW_SMPS_10uH"/>
+									<listOptionValue builtIn="false" value="CONFIG_HW_LS_RO"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="fr.ac6.ide.wise.managedbuild.option.c.compiler.include.paths.2138375269" name="Include paths (-I)" superClass="fr.ac6.ide.wise.managedbuild.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="../../Inc"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Core/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Crypto/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Mac/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Mac/Region/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/SX126X/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/Utils/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/Drivers/CMSIS/Device/ST/BlueNRG_LP/Include"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/Drivers/Peripherals_Drivers/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/Middlewares/ST/hal/Inc"/>
+								</option>
+								<option id="fr.ac6.ide.wise.managedbuild.option.c.compiler.std.615409422" name="Language standard" superClass="fr.ac6.ide.wise.managedbuild.option.c.compiler.std" useByScannerDiscovery="true" value="fr.ac6.ide.wise.managedbuild.option.c.compiler.std.gnu99" valueType="enumerated"/>
+								<inputType id="fr.ac6.ide.wise.managedbuild.tool.c.compiler.input.1479557496" superClass="fr.ac6.ide.wise.managedbuild.tool.c.compiler.input"/>
+							</tool>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.cpp.compiler.502358693" name="GCC C++ Compiler" superClass="fr.ac6.ide.wise.managedbuild.tool.cpp.compiler"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.c.linker.1083268807" name="GCC Linker" superClass="fr.ac6.ide.wise.managedbuild.tool.c.linker">
+								<option id="fr.ac6.ide.wise.managedbuild.option.c.linker.nostart.1865097672" name="Do not use standard start files (-nostartfiles)" superClass="fr.ac6.ide.wise.managedbuild.option.c.linker.nostart" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="fr.ac6.ide.wise.managedbuild.option.c.linker.nodeflibs.1802653790" name="Do not use default libraries (-nodefaultlibs)" superClass="fr.ac6.ide.wise.managedbuild.option.c.linker.nodeflibs" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="fr.ac6.ide.wise.managedbuild.option.c.linker.libs.1818645855" name="Libraries (-l)" superClass="fr.ac6.ide.wise.managedbuild.option.c.linker.libs" useByScannerDiscovery="false" valueType="libs"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="fr.ac6.ide.wise.managedbuild.option.c.linker.paths.129450523" name="Library search path (-L)" superClass="fr.ac6.ide.wise.managedbuild.option.c.linker.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="../../Middlewares/ST/cryptolib"/>
+									<listOptionValue builtIn="false" value="../../Middlewares/ST/Bluetooth_LE/library"/>
+								</option>
+								<option id="fr.ac6.ide.wise.managedbuild.option.c.linker.other.1240359476" name="Other linker flags" superClass="fr.ac6.ide.wise.managedbuild.option.c.linker.other" useByScannerDiscovery="false" value="-Wl,--cref " valueType="string"/>
+								<option id="fr.ac6.ide.wise.managedbuild.option.c.linker.usenewlibnano.1054797115" name="Use newlib-nano (--specs=nano.specs)" superClass="fr.ac6.ide.wise.managedbuild.option.c.linker.usenewlibnano" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="fr.ac6.ide.wise.managedbuild.option.c.linker.script.2028926888" name="Linker Scripts (-T)" superClass="fr.ac6.ide.wise.managedbuild.option.c.linker.script" useByScannerDiscovery="false" value="../HTLRBL32L.ld" valueType="string"/>
+								<inputType id="fr.ac6.ide.wise.managedbuild.tool.c.linker.input.132395191" superClass="fr.ac6.ide.wise.managedbuild.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.cpp.linker.207424482" name="GCC Linker" superClass="fr.ac6.ide.wise.managedbuild.tool.cpp.linker"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.assembler.648767639" name="GCC Assembler" superClass="fr.ac6.ide.wise.managedbuild.tool.assembler">
+								<option id="fr.ac6.ide.wise.managedbuild.option.assembler.usepreprocessor.707155186" name="Use preprocessor (-x assembler-with-cpp)" superClass="fr.ac6.ide.wise.managedbuild.option.assembler.usepreprocessor" useByScannerDiscovery="false"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="fr.ac6.ide.wise.managedbuild.option.assembler.include.paths.922612604" name="Include paths (-I)" superClass="fr.ac6.ide.wise.managedbuild.option.assembler.include.paths" useByScannerDiscovery="false" valueType="includePath"/>
+								<inputType id="fr.ac6.ide.wise.managedbuild.tool.assembler.input.1715140058" name="Assembly file" superClass="fr.ac6.ide.wise.managedbuild.tool.assembler.input"/>
+							</tool>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.archiver.1868705931" name="GCC Archiver" superClass="fr.ac6.ide.wise.managedbuild.tool.archiver"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.objcopy.1966632796" name="Generate binary" superClass="fr.ac6.ide.wise.managedbuild.tool.objcopy"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.size.1239938539" name="Print Size" superClass="fr.ac6.ide.wise.managedbuild.tool.size"/>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="LoRaWAN|HT_BLE_API|.settings|../HT_BLE_API|HT_APP|Core" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.release.324730815">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.release.324730815" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.release.324730815" name="Release" parent="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.release">
+					<folderInfo id="fr.ac6.ide.wise.managedbuild.projecttype.exe.config.release.324730815." name="/" resourcePath="">
+						<toolChain id="fr.ac6.ide.wise.managedbuild.toolchain.exe.release.506689951" name="WiSE GCC Toolchain" superClass="fr.ac6.ide.wise.managedbuild.toolchain.exe.release">
+							<option id="fr.ac6.ide.wise.managedbuild.option.optimization.level.936438961" name="Optimization level" superClass="fr.ac6.ide.wise.managedbuild.option.optimization.level" value="fr.ac6.ide.wise.managedbuild.option.optimization.level.size" valueType="enumerated"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.debugging.level.900663288" name="Debugging level" superClass="fr.ac6.ide.wise.managedbuild.option.debugging.level"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.target.board.771005500" name="Board" superClass="fr.ac6.ide.wise.managedbuild.option.target.board" value="SIP_HTLRBL32L" valueType="string"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.target.soc.489944285" name="SOC" superClass="fr.ac6.ide.wise.managedbuild.option.target.soc" value="BlueNRG-355VC" valueType="string"/>
+							<option id="fr.ac6.ide.wise.managedbuild.option.target.series.1002874565" name="Series" superClass="fr.ac6.ide.wise.managedbuild.option.target.series" value="BlueNRG-LP" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="fr.ac6.ide.wise.managedbuild.targetPlatform.1619586103" isAbstract="false" osList="all" superClass="fr.ac6.ide.wise.managedbuild.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/HTLRBL32L-PushButton_LoRaWAN}/Release" id="fr.ac6.ide.wise.managedbuild.builder.1965670266" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="WiSE Builder" superClass="fr.ac6.ide.wise.managedbuild.builder"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.c.compiler.1764906823" name="GCC C Compiler" superClass="fr.ac6.ide.wise.managedbuild.tool.c.compiler">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="fr.ac6.ide.wise.managedbuild.option.c.compiler.defs.677144314" name="Defined symbols (-D)" superClass="fr.ac6.ide.wise.managedbuild.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="CONFIG_DEVICE_BLUENRG_LP"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="fr.ac6.ide.wise.managedbuild.option.c.compiler.include.paths.1295467483" name="Include paths (-I)" superClass="fr.ac6.ide.wise.managedbuild.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\inc&quot;"/>
+								</option>
+								<inputType id="fr.ac6.ide.wise.managedbuild.tool.c.compiler.input.1025854268" superClass="fr.ac6.ide.wise.managedbuild.tool.c.compiler.input"/>
+							</tool>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.cpp.compiler.2049043782" name="GCC C++ Compiler" superClass="fr.ac6.ide.wise.managedbuild.tool.cpp.compiler"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.c.linker.1608110332" name="GCC Linker" superClass="fr.ac6.ide.wise.managedbuild.tool.c.linker">
+								<inputType id="fr.ac6.ide.wise.managedbuild.tool.c.linker.input.610550104" superClass="fr.ac6.ide.wise.managedbuild.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.cpp.linker.144369020" name="GCC Linker" superClass="fr.ac6.ide.wise.managedbuild.tool.cpp.linker"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.assembler.1056068168" name="GCC Assembler" superClass="fr.ac6.ide.wise.managedbuild.tool.assembler">
+								<option id="fr.ac6.ide.wise.managedbuild.option.assembler.usepreprocessor.1658206318" name="Use preprocessor (-x assembler-with-cpp)" superClass="fr.ac6.ide.wise.managedbuild.option.assembler.usepreprocessor"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="fr.ac6.ide.wise.managedbuild.option.assembler.include.paths.1435098603" name="Include paths (-I)" superClass="fr.ac6.ide.wise.managedbuild.option.assembler.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\inc&quot;"/>
+								</option>
+								<inputType id="fr.ac6.ide.wise.managedbuild.tool.assembler.input.843309336" name="Assembly file" superClass="fr.ac6.ide.wise.managedbuild.tool.assembler.input"/>
+							</tool>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.archiver.766509519" name="GCC Archiver" superClass="fr.ac6.ide.wise.managedbuild.tool.archiver"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.objcopy.1778221398" name="Generate binary" superClass="fr.ac6.ide.wise.managedbuild.tool.objcopy"/>
+							<tool id="fr.ac6.ide.wise.managedbuild.tool.size.1814428213" name="Print Size" superClass="fr.ac6.ide.wise.managedbuild.tool.size"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="HTLRBL32L-PushButton_LoRaWAN.fr.ac6.ide.wise.managedbuild.projecttype.exe.1666325195" name="Executable" projectType="fr.ac6.ide.wise.managedbuild.projecttype.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/HTLRBL32L-PushButton_LoRaWAN"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/HTLRBL32L-PushButton_LoRaWAN"/>
+		</configuration>
+	</storageModule>
+</cproject>

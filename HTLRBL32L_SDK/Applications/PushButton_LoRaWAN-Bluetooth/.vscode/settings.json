@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "ht_push_button.h": "c",
+        "ht_push_button_cfg.h": "c"
+    }
+}
