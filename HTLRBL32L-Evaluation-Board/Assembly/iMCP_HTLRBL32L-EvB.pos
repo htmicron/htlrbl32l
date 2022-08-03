@@ -1,0 +1,61 @@
+### Module positions - created on Thu Jun 23 12:05:25 2022 ###
+### Printed by Pcbnew version (6.0.4)
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                                           Package                                            PosX       PosY       Rot  Side
+C1        10nF                                          C_0402_1005Metric                                8.3280    12.3190  -90.0000  top
+C2        47pF                                          C_0402_1005Metric                               11.6864    10.3700    0.0000  top
+C3        47pF                                          C_0402_1005Metric                                8.3288     6.8800  180.0000  top
+C4        NC                                            C_0402_1005Metric                               26.4400    16.2100    0.0000  top
+C5        1uF_X5R                                       C_0402_1005Metric                               26.4400    15.1500    0.0000  top
+C6        1uF_X5R                                       C_0402_1005Metric                               22.5655    12.9362    0.0000  top
+C7        NC                                            C_0402_1005Metric                               22.5655    14.2570    0.0000  top
+C8        100nF                                         C_0402_1005Metric                               18.2200     5.7912  -90.0000  top
+C9        100nF                                         C_0402_1005Metric                               10.7300     7.7100    0.0000  top
+C12       100nF                                         C_0402_1005Metric                               23.5000     5.8000  -90.0000  top
+C13       100nF                                         C_0402_1005Metric                               28.9700     5.8000  -90.0000  top
+C14       100nF                                         C_0402_1005Metric                               34.1770     7.9050  -90.0000  top
+C15       NC                                            C_0402_1005Metric                               70.2755     4.7190  -90.0000  top
+C16       NC                                            C_0402_1005Metric                               70.2755    17.1450  -90.0000  top
+C17       NC                                            C_0402_1005Metric                               74.0900     4.7220  -90.0000  top
+C18       NC                                            C_0402_1005Metric                               74.0900    17.1500  -90.0000  top
+CN1       10118194-0001LF                               AMPHENOL_10118194-0001LF                         2.3000    11.4300  -90.0000  top
+CN2       S2B-PH-SM4-TB(LF)(SN)                         JST_S2B-PH-SM4-TB(LF)(SN)                       10.9220    15.0000  180.0000  top
+CN3       Header_01x16                                  PinHeader_1x16_P2.54mm_Vertical                  6.3500     1.2700   90.0000  top
+CN4       Header_01x12                                  PinHeader_1x12_P2.54mm_Vertical                 16.5088    21.5900   90.0000  top
+CN5x      CONUFL001-SMD                                 U.FL                                            77.7300     5.2070  -90.0000  top
+CN6x      CONUFL001-SMD                                 U.FL                                            77.7300    17.6220  -90.0000  top
+D1        D_Schottky                                    DIO_SS26FL                                      20.2692    11.8364  -90.0000  top
+D2        LED_0603                                      LED_0603_1608Metric                              5.2069     5.1816    0.0000  top
+D3        LED_0603                                      LED_0603_1608Metric                             27.2500    12.9375   90.0000  top
+FB1       FerriteBead_Small                             L_0402_1005Metric                               10.7188    11.8300  180.0000  top
+J1        36903205S                                     RF_SHIELD_WE_36903205S                          58.5000    11.4300    0.0000  top
+JP1       SolderJumper_2_Open                           C_0603_1608Metric                               20.9296     7.0612   90.0000  top
+JP2       Jumper_2_Open                                 PinHeader_1x02_P2.54mm_Vertical                 31.4909    12.7305   90.0000  top
+JP3       Jumper_2_Open                                 PinHeader_1x02_P2.54mm_Vertical                 31.4909    16.8250   90.0000  top
+L1        0R                                            L_0402_1005Metric                               72.2219     5.2070    0.0000  top
+L2        0R                                            L_0402_1005Metric                               72.2219    17.6301    0.0000  top
+Q1        IRLML6402TRPBF                                SOT-23                                          17.1704    12.7700    0.0000  top
+Q2        IRLML6402TRPBF                                SOT-23                                          17.6200    16.6600    0.0000  top
+R1        100K                                          R_0402_1005Metric                                7.4930     8.6650   90.0000  top
+R2        27                                            R_0402_1005Metric                               10.7188     9.1440  180.0000  top
+R3        27                                            R_0402_1005Metric                                8.8138     8.6638   90.0000  top
+R4        1K                                            R_0402_1005Metric                               16.2800    10.3700  180.0000  top
+R5        100K                                          R_0402_1005Metric                               13.9573    10.3700  180.0000  top
+R6        100K                                          R_0402_1005Metric                               13.4747    12.3087  -90.0000  top
+R7        100K                                          R_0402_1005Metric                               20.2700    17.6000  -90.0000  top
+R8        100K                                          R_0402_1005Metric                               19.4600     6.7650   90.0000  top
+R9        1K                                            R_0402_1005Metric                                8.3288     5.1816    0.0000  top
+R12       1K                                            R_0402_1005Metric                               28.9500    16.3322   90.0000  top
+R13       4K7                                           R_0402_1005Metric                               23.5000     7.9050   90.0000  top
+R14       10K                                           R_0402_1005Metric                               28.9700     7.9050   90.0000  top
+R15       10K                                           R_0402_1005Metric                               34.1770     5.8000   90.0000  top
+CN6       SMA                                           SMA                                             77.5300    17.6220   90.0000  top
+CN5       SMA                                           SMA                                             77.5200     5.2070   90.0000  top
+SW1       SW_Push_Dual_New                              PTS810SJG250SMTRLFS                             26.2370     7.4279  -90.0000  top
+SW2       SW_Push_Dual_New                              PTS810SJG250SMTRLFS                             31.6370     7.4279  -90.0000  top
+SW3       SW_Push_Dual_New                              PTS810SJG250SMTRLFS                             36.9710     7.4279  -90.0000  top
+U1        iMCP_HTLRBL41L-10                             iMCP_HTLRBL32L-10                               58.5000    11.4300  180.0000  top
+U2        FT234XD-R                                     IC_FT234XD-R                                    15.2100     7.4800  180.0000  top
+U3        DFN8_3X3_ONS                                  NCV8165ML330TCG_DS                              23.0800    17.1100  180.0000  top
+## End
