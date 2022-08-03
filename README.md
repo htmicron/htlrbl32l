@@ -6,5 +6,5 @@ iMCP HTLRBL32L documents and PCB examples.
 
 How to clone this branch:
 ```
-git clone --single-branch --branch SDK git@github.com:htmicron/htlrbl32l.git
+git clone --single-branch --branch documents git@github.com:htmicron/htlrbl32l.git
 ```
