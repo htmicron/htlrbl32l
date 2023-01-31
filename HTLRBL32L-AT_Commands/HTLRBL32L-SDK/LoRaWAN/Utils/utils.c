@@ -5,7 +5,7 @@
  *      Author: christian.lehmen
  */
 
-#include "utils.h"
+#include <utils.h>
 #include <string.h>
 
 /* USER CODE BEGIN Header */

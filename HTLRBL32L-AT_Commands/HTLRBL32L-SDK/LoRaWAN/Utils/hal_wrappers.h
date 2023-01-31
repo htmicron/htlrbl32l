@@ -8,7 +8,7 @@
 #ifndef HAL_WRAPPERS_H_
 #define HAL_WRAPPERS_H_
 
-#include "bluenrg_lp.h"
+#include "BlueNRG_LP.h"
 #include "rf_driver_hal_gpio.h"
 typedef void( GpioIrqHandler )( void* context );
 

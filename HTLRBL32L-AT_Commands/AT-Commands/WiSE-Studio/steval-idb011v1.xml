@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<targetDefinitions xmlns="https://www.ac6-tools.com/WiSE_Studio_XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema WiSE_Studio_XMLSchema_1_0_0.xsd">
+  <board id="steval-idb011v1">
+    <name>steval-idb011v1</name>
+    <socId>bluenrg-355mc</socId>
+    <dbgIF/>
+    <dbgDEV/>
+  </board>
+</targetDefinitions>

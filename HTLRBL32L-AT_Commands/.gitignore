@@ -1,0 +1,15 @@
+*.uvguix.*
+*.o
+*.d
+*.crf
+*.iex
+*.dep
+*.axf
+*.htm
+*.lnp
+*.bin
+*.hex
+*.map
+*.Bak
+*.scvd
+*/MDK-ARM/HTLRBL32L/Objects/

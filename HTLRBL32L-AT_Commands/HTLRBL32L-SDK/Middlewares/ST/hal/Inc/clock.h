@@ -21,7 +21,7 @@
 #ifndef __CLOCK_H__
 #define __CLOCK_H__
 
-#include "BlueNRG_LPx.h"
+#include "bluenrg_lpx.h"
 
 /** 
  * @brief Number of clocks in one seconds.

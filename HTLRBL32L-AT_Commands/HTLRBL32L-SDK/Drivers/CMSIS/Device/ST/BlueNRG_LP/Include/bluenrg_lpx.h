@@ -1,3 +1,3 @@
 
-    #include "bluenrg_lp.h" /* header file supporting BlueNRG-LP */
+    #include "BlueNRG_LP.h" /* header file supporting BlueNRG-LP */
 

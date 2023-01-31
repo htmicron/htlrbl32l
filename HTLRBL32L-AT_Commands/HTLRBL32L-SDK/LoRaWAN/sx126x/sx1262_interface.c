@@ -45,7 +45,6 @@
 #include "sx126x_board.h"
 #include "hal_wrappers.h"
 #include "peripheral_init.h"
-#include "rf_driver_hal_gpio.h"
 #include "utils.h"
 
 void SX126xIoInit( void )

@@ -2041,55 +2041,55 @@ static void ProcessMacCommands( uint8_t *payload, uint8_t macIndex, uint8_t comm
             }
             case SRV_MAC_LINK_ADR_REQ:
             {
-//							printf("linkADRreq: %u\n",(commandsSize - ( macIndex - 1 )));
-							/*if linkADRreq comes incomplete (its supposed to be 5 bytes long) the device ignores the command (can only be verified if it is the last command in the payload)*/
-							if(commandsSize - ( macIndex - 1 ) < 5){
-								macIndex +=commandsSize - ( macIndex - 1 );
-								break;
-							};
-							
-                LinkAdrReqParams_t linkAdrReq;
-                int8_t linkAdrDatarate = DR_0;
-                int8_t linkAdrTxPower = TX_POWER_0;
-                uint8_t linkAdrNbRep = 0;
-                uint8_t linkAdrNbBytesParsed = 0;
-
-                if( adrBlockFound == false )
-                {
-                    adrBlockFound = true;
-
-                    // Fill parameter structure
-                    linkAdrReq.Payload = &payload[macIndex - 1];
-                    linkAdrReq.PayloadSize = commandsSize - ( macIndex - 1 );
-                    linkAdrReq.AdrEnabled = MacCtx.NvmCtx->AdrCtrlOn;
-                    linkAdrReq.UplinkDwellTime = MacCtx.NvmCtx->MacParams.UplinkDwellTime;
-                    linkAdrReq.CurrentDatarate = MacCtx.NvmCtx->MacParams.ChannelsDatarate;
-                    linkAdrReq.CurrentTxPower = MacCtx.NvmCtx->MacParams.ChannelsTxPower;
-                    linkAdrReq.CurrentNbRep = MacCtx.NvmCtx->MacParams.ChannelsNbTrans;
-                    linkAdrReq.Version = MacCtx.NvmCtx->Version;
-
-                    // Process the ADR requests
-                    status = RegionLinkAdrReq( MacCtx.NvmCtx->Region, &linkAdrReq, &linkAdrDatarate,
-                                               &linkAdrTxPower, &linkAdrNbRep, &linkAdrNbBytesParsed );
-									
-//					printf("status: %d\n", status);
-                    if( ( status & 0x07 ) == 0x07 )
-                    {
-											
-                        MacCtx.NvmCtx->MacParams.ChannelsDatarate = linkAdrDatarate;
-                        MacCtx.NvmCtx->MacParams.ChannelsTxPower = linkAdrTxPower;
-                        MacCtx.NvmCtx->MacParams.ChannelsNbTrans = linkAdrNbRep;
-                    }
-
-                    // Add the answers to the buffer
-                    for( uint8_t i = 0; i < ( linkAdrNbBytesParsed / 5 ); i++ )
-                    {
-                        LoRaMacCommandsAddCmd( MOTE_MAC_LINK_ADR_ANS, &status, 1 );
-                    }
-
-                    // Update MAC index
-                    macIndex += linkAdrNbBytesParsed - 1;
-                }
+////							printf("linkADRreq: %u\n",(commandsSize - ( macIndex - 1 )));
+//							/*if linkADRreq comes incomplete (its supposed to be 5 bytes long) the device ignores the command (can only be verified if it is the last command in the payload)*/
+//							if(commandsSize - ( macIndex - 1 ) < 5){
+//								macIndex +=commandsSize - ( macIndex - 1 );
+//								break;
+//							};
+//
+//                LinkAdrReqParams_t linkAdrReq;
+//                int8_t linkAdrDatarate = DR_0;
+//                int8_t linkAdrTxPower = TX_POWER_0;
+//                uint8_t linkAdrNbRep = 0;
+//                uint8_t linkAdrNbBytesParsed = 0;
+//
+//                if( adrBlockFound == false )
+//                {
+//                    adrBlockFound = true;
+//
+//                    // Fill parameter structure
+//                    linkAdrReq.Payload = &payload[macIndex - 1];
+//                    linkAdrReq.PayloadSize = commandsSize - ( macIndex - 1 );
+//                    linkAdrReq.AdrEnabled = MacCtx.NvmCtx->AdrCtrlOn;
+//                    linkAdrReq.UplinkDwellTime = MacCtx.NvmCtx->MacParams.UplinkDwellTime;
+//                    linkAdrReq.CurrentDatarate = MacCtx.NvmCtx->MacParams.ChannelsDatarate;
+//                    linkAdrReq.CurrentTxPower = MacCtx.NvmCtx->MacParams.ChannelsTxPower;
+//                    linkAdrReq.CurrentNbRep = MacCtx.NvmCtx->MacParams.ChannelsNbTrans;
+//                    linkAdrReq.Version = MacCtx.NvmCtx->Version;
+//
+//                    // Process the ADR requests
+//                    status = RegionLinkAdrReq( MacCtx.NvmCtx->Region, &linkAdrReq, &linkAdrDatarate,
+//                                               &linkAdrTxPower, &linkAdrNbRep, &linkAdrNbBytesParsed );
+//
+////					printf("status: %d\n", status);
+//                    if( ( status & 0x07 ) == 0x07 )
+//                    {
+//
+//                        MacCtx.NvmCtx->MacParams.ChannelsDatarate = linkAdrDatarate;
+//                        MacCtx.NvmCtx->MacParams.ChannelsTxPower = linkAdrTxPower;
+//                        MacCtx.NvmCtx->MacParams.ChannelsNbTrans = linkAdrNbRep;
+//                    }
+//
+//                    // Add the answers to the buffer
+//                    for( uint8_t i = 0; i < ( linkAdrNbBytesParsed / 5 ); i++ )
+//                    {
+//                        LoRaMacCommandsAddCmd( MOTE_MAC_LINK_ADR_ANS, &status, 1 );
+//                    }
+//
+//                    // Update MAC index
+//                    macIndex += linkAdrNbBytesParsed - 1;
+//                }
                 break;
             }
             case SRV_MAC_DUTY_CYCLE_REQ:
@@ -2183,7 +2183,7 @@ static void ProcessMacCommands( uint8_t *payload, uint8_t macIndex, uint8_t comm
                 MacCtx.NvmCtx->MacParams.ReceiveDelay2 = MacCtx.NvmCtx->MacParams.ReceiveDelay1 + 1000 ; 
 								
 								
-		//printf("RxWindow1 new delay: %d | RxWindow2 new Delay: %d\n",MacCtx.NvmCtx->MacParams.ReceiveDelay1,MacCtx.NvmCtx->MacParams.ReceiveDelay2);
+//                printf("RxWindow1 new delay: %d | RxWindow2 new Delay: %d\n",MacCtx.NvmCtx->MacParams.ReceiveDelay1,MacCtx.NvmCtx->MacParams.ReceiveDelay2);
                 LoRaMacCommandsAddCmd( MOTE_MAC_RX_TIMING_SETUP_ANS, macCmdPayload, 0 );
                 // Setup indication to inform the application
                 SetMlmeScheduleUplinkIndication( );
@@ -2528,7 +2528,7 @@ static LoRaMacStatus_t ScheduleTx( bool allowDelayedTx )
 
     if( MacCtx.NvmCtx->NetworkActivation == ACTIVATION_TYPE_NONE )
     {
-				printf("NO NETWORK ACTIVATION\n");
+//				printf("NO NETWORK ACTIVATION\n");
 			
         MacCtx.RxWindow1Delay = MacCtx.NvmCtx->MacParams.JoinAcceptDelay1 + MacCtx.RxWindow1Config.WindowOffset;
         MacCtx.RxWindow2Delay = MacCtx.NvmCtx->MacParams.JoinAcceptDelay2 + MacCtx.RxWindow2Config.WindowOffset ;
@@ -4542,7 +4542,7 @@ LoRaMacStatus_t LoRaMacMlmeRequest( MlmeReq_t* mlmeRequest )
     {
         case MLME_JOIN:
         {
-						printf("OTAA JOIN REQUEST\n");
+//			printf("OTAA JOIN REQUEST\n");
             if( ( MacCtx.MacState & LORAMAC_TX_DELAYED ) == LORAMAC_TX_DELAYED )
             {
                 return LORAMAC_STATUS_BUSY;

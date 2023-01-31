@@ -186,7 +186,7 @@ uint32_t PowerSaveLevel_selected[4]={0,};
 #endif
 
 static volatile uint32_t IOwakeupSources_VR;
-//static volatile uint32_t InternalWakeupSources_VR;
+static volatile uint32_t InternalWakeupSources_VR;
 
 /**** Private function definition **********************************************/
 static uint8_t IO_IRQ_Enabled(uint32_t wkSource, uint8_t *IRQA_enabled, uint8_t *IRQB_enabled)

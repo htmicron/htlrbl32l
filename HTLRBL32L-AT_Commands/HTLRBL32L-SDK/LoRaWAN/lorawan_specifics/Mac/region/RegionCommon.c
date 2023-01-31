@@ -289,8 +289,8 @@ uint8_t RegionCommonLinkAdrReqVerifyParams( RegionCommonLinkAdrReqVerifyParams_t
     *txPow = txPower;
     *nbRep = nbRepetitions;
 		
-//		printf("LinkADRReq status %d\n",status);
-//		printf("new power: %d\n",txPower);
+		printf("LinkADRReq status %d\n",status);
+		printf("new power: %d\n",txPower);
     return status;
 }
 
