@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for STSAFE-A1xx Middleware Component</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<div class="card fluid">
+<div class="sectione dark">
+<center>
+<h1 id="release-notes-for-stsafe-a1xx-middleware"><small>Release Notes for</small> <strong>STSAFE-A1xx Middleware</strong></h1>
+<p>Copyright © 2019 STMicroelectronics</p>
+<a href="https://www.st.com" class="logo" target="_blank"><img src="_htmresc/st_logo.png" alt="ST logo" /></a>
+</center>
+</div>
+</div>
+<h1 id="license">License</h1>
+<p>This software component is licensed by ST under STSAFE DRIVER SOFTWARE LICENSE AGREEMENT (SLA0088), the “License”; You may not use this component except in compliance with the License. You may obtain a copy of the License at:</p>
+<p>[<a href="en.DM00594102.pdf" target="_blank">SLA0088 License @ www.st.com</a>]</p>
+<h1 id="purpose">Purpose</h1>
+<p>The STSAFE-A1xx Middleware is a software component providing a complete set of APIs to access all the STSAFE-A110 device features from a Host Microcontroller.</p>
+<p><img src="_htmresc/architecture_2.PNG" /></p>
+<p>The STSAFE-A110 is a highly secure solution that acts as a secure element providing authentication and data management services to a local or remote host. It consists of a full turnkey solution with a secure operating system running on the latest generation of secure microcontrollers. The STSAFE-A110 can be integrated in IoT (Internet of things) devices, smart-home, smart-city and industrial applications, consumer electronics devices, consumables and accessories.</p>
+<p><strong>STSAFE-A110 Key Features</strong>:</p>
+<ul>
+<li><p>Authentication (of peripherals, IoT and USB Type-C devices)</p></li>
+<li><p>Secure channel establishment with remote host including transport layer security (TLS) handshake</p></li>
+<li><p>Signature verification service (secure boot and firmware upgrade)</p></li>
+<li><p>Usage monitoring with secure counters</p></li>
+<li><p>Pairing and secure channel with host application processor</p></li>
+<li><p>Wrapping and unwrapping of local or remote host envelopes</p></li>
+<li><p>On-chip key pair generation</p></li>
+</ul>
+<p>Here is the list of references to user documents:</p>
+<ul>
+<li><a href="https://www.st.com/resource/en/datasheet/stsafe-a110.pdf" target="_blank">STSAFE-A110 Datasheet</a> : Authentication state-of-the-art security for peripherals and IoT devices</li>
+</ul>
+</div>
+<div class="col-sm-12 col-lg-8">
+<center>
+<p><a href="https://www.st.com/en/secure-mcus/stsafe-a110.html" class="logo" target="_blank"><img src="_htmresc/STSAFE_A_logo.png" alt="STSAFE-A logo" /></a></p>
+<h1 id="update-history">Update History</h1>
+</center>
+<details open>
+<p><summary>V3.3.1 / 8-July-2020</summary></p>
+<h2 id="main-changes">Main Changes</h2>
+<h3 id="maintenance-release">Maintenance release</h3>
+<p>This release implements a new version of the Middleware in order to:</p>
+<ul>
+<li><p>API change for read data partition.</p></li>
+<li><p>New communication bus timeout management</p></li>
+</ul>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">StSafeA_Read : API change to add amount of data to read command in order to differentiate it with expected response length</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">StSafeA_SendBytes : Remove the bus DeInit + Init in case of driver’s failure and change timeout value in milliseconds instead of number of loop</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">StSafeA_ReceiveBytes : Remove the bus DeInit + Init in case of driver’s failure and change timeout value in milliseconds instead of number of loop</td>
+</tr>
+</tbody>
+</table>
+<h2 id="development-toolchains-and-compilers">Development Toolchains and Compilers</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different toolchains. It has been tested in applications developed using the following toolchains and compilers:</p>
+<ul>
+<li><p>IAR EWARM v8.40.2</p></li>
+<li><p>MDK-ARM v5.29.0</p></li>
+<li><p>STM32CubeIDE v1.3.0</p></li>
+<li><p>SW4STM32 v2.9.1</p></li>
+</ul>
+<h2 id="supported-devices-and-boards">Supported Devices and Boards</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different STM32 microcontrollers. It has been tested in applications developed for the following devices and boards:</p>
+<ul>
+<li>NUCLEO-L476RG STM32L476</li>
+</ul>
+<h2 id="backward-compatibility">Backward Compatibility</h2>
+<p>There is backward compatibility with previous version (V3.3.0) except for API change mentioned above</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>This software release is compatible with:</p>
+<ul>
+<li><p>MbedTLS V2.21.0</p></li>
+<li><p>Cryptographic Library X-CUBE-CRYPTOLIB V3.1.0 + PATCH_CRYPTOLIB V3.1.2</p></li>
+<li><p>STM32L4xx HAL drivers V1.11.1</p></li>
+</ul>
+<p><br />
+</p>
+</details>
+<details open>
+<p><summary>V3.3.0 / 29-April-2020</summary></p>
+<h2 id="main-changes-1">Main Changes</h2>
+<h3 id="maintenance-release-1">Maintenance release</h3>
+<p>This release implements a new version of the Middleware in order to:</p>
+<ul>
+<li><p>Modify service interface to provide MCU, IO Bus, Timing &amp; CRC API definition at user space or anyway in the upper layers according to the hardware user choices.</p></li>
+<li><p>API change for signature generation. Both ECDSA signature’s parts R &amp; S are returned separately.</p></li>
+<li><p>Product data buffer type moved to products specific header file (stsafe-a100.h &amp; stsafe-a110.h)</p></li>
+<li><p>API change for public key slot query.</p></li>
+</ul>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">StSafeA_HW_Probe : Update CRC16 X25 initialization</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">StSafeA_GenerateKeyPair : API change (parameters swap)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">StSafeA_GenerateSignature : API change to return ECDSA signature’s parts R &amp; S separately</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">StSafeA_GetSignature : API change to return ECDSA signature’s parts R &amp; S separately</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">StSafeA_PublicKeySlotQuery : API change to add expected length of returned curve identifier</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STSAFEA_HOST_KEY_LENGTH : Value is not anymore in bits (128) but in bytes (16)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="development-toolchains-and-compilers-1">Development Toolchains and Compilers</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different toolchains. It has been tested in applications developed using the following toolchains and compilers:</p>
+<ul>
+<li><p>IAR EWARM v8.40.2</p></li>
+<li><p>MDK-ARM v5.29.0</p></li>
+<li><p>STM32CubeIDE v1.3.0</p></li>
+<li><p>SW4STM32 v2.9.1</p></li>
+</ul>
+<h2 id="supported-devices-and-boards-1">Supported Devices and Boards</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different STM32 microcontrollers. It has been tested in applications developed for the following devices and boards:</p>
+<ul>
+<li>NUCLEO-L476RG STM32L476</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>There is backward compatibility with previous version (V3.2.0) except for API change mentioned above</p>
+<h2 id="dependencies-1">Dependencies</h2>
+<p>This software release is compatible with:</p>
+<ul>
+<li><p>MbedTLS V2.21.0</p></li>
+<li><p>Cryptographic Library X-CUBE-CRYPTOLIB V3.1.0 + PATCH_CRYPTOLIB V3.1.2</p></li>
+<li><p>STM32L4xx HAL drivers V1.11.1</p></li>
+</ul>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V3.2.0 / 17-March-2020</summary></p>
+<h2 id="main-changes-2">Main Changes</h2>
+<h3 id="maintenance-release-2">Maintenance release</h3>
+<p>This release implements a new version of the Middleware in order to:</p>
+<ul>
+<li><p>Add CRC16X25_Init &amp; CRC_Compute to provide possibility to use HAL CRC peripheral like in STM32 family (By default software CRC computation is used)</p></li>
+<li><p>Modify StSafeA_Update to support atomic update with large buffer</p></li>
+<li><p>Add StSafeA_RndSubject_t type into STSAFE-A110’s header file</p></li>
+</ul>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CRC16X25_Init : HAL CRC16 X25 initialization. Remind to <strong>add pointer to CRC16X25_Init through ‘pCtx’ object defined as parameter of StSafeA_HW_Probe</strong> function (HwCtx-&gt;CrcInit = CRC16X25_Init).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CRC_Compute : HAL CRC computation. Remind to <strong>add pointer to CRC_Compute through ’pCtx" object defined as parameter of StSafeA_HW_Probe</strong> function (HwCtx-&gt;CrcInit = CRC_Compute).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">StSafeA_Update command : Updated when command is used in an atomic way with payload size larger than atomic buffer length</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">StSafeA_RndSubject_t type : added to stsafea110.h</td>
+</tr>
+</tbody>
+</table>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different toolchains. It has been tested in applications developed using the following toolchains and compilers:</p>
+<ul>
+<li><p>IAR EWARM v8.40.2</p></li>
+<li><p>MDK-ARM v5.29.0</p></li>
+<li><p>STM32CubeIDE v1.3.0</p></li>
+<li><p>SW4STM32 v2.9.1</p></li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different STM32 microcontrollers. It has been tested in applications developed for the following devices and boards:</p>
+<ul>
+<li>NUCLEO-L476RG STM32L476</li>
+</ul>
+<h2 id="backward-compatibility-2">Backward Compatibility</h2>
+<p>There is backward compatibility with previous version (V3.1.1)</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>This software release is compatible with:</p>
+<ul>
+<li><p>MbedTLS V2.21.0</p></li>
+<li><p>Cryptographic Library X-CUBE-CRYPTOLIB V3.1.0 + PATCH_CRYPTOLIB V3.1.2</p></li>
+<li><p>STM32L4xx HAL drivers V1.11.1</p></li>
+</ul>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V3.1.1 / 13-February-2020</summary></p>
+<h2 id="main-changes-3">Main Changes</h2>
+<h3 id="maintenance-release-3">Maintenance release</h3>
+<p>This release implements a new version of the Middleware in order to:</p>
+<ul>
+<li><p>Update I2C polling</p></li>
+<li><p>Update StSafeA_GenerateKeyPair command</p></li>
+</ul>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">I2C polling : different I2C polling duration for I2C transmit &amp; I2C receive</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">StSafeA_GenerateKeyPair command : optimize I2C response duration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="development-toolchains-and-compilers-3">Development Toolchains and Compilers</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different toolchains. It has been tested in applications developed using the following toolchains and compilers:</p>
+<ul>
+<li><p>IAR EWARM v8.42.2</p></li>
+<li><p>MDK-ARM v5.29.0</p></li>
+<li><p>STM32CubeIDE V1.2.1</p></li>
+<li><p>SW4STM32 v2.9.1</p></li>
+</ul>
+<h2 id="supported-devices-and-boards-3">Supported Devices and Boards</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different STM32 microcontrollers. It has been tested in applications developed for the following devices and boards:</p>
+<ul>
+<li>NUCLEO-L476RG STM32L476</li>
+</ul>
+<h2 id="backward-compatibility-3">Backward Compatibility</h2>
+<p>There is backward compatibility with previous version (V3.1.0)</p>
+<h2 id="dependencies-3">Dependencies</h2>
+<p>This software release is compatible with:</p>
+<ul>
+<li><p>MbedTLS V2.17.0</p></li>
+<li><p>Cryptographic Library X-CUBE-CRYPTOLIB V3.1.0 + PATCH_CRYPTOLIB V3.1.2</p></li>
+<li><p>STM32L4xx HAL drivers V1.11.0</p></li>
+</ul>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V3.1.0 / 16-September-2019</summary></p>
+<h2 id="main-changes-4">Main Changes</h2>
+<h3 id="maintenance-release-4">Maintenance release</h3>
+<p>This release implements a new version of the Middleware in order to:</p>
+<ul>
+<li><p>Clean STSAFE-A100/A110 unsupported commands</p></li>
+<li><p>Move “Key Slot Number” definitions into device specific include file</p></li>
+<li><p>Create STSAFE-A110 device specific include file</p></li>
+</ul>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Signature session : only supported for STSAFE-A100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Entity signature verification : only supported for STSAFE-A100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Public key slot : only supported for STSAFE-A100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Signature generation, Key establishment, Wrap &amp; Unwrap local envelope, Generate key pair : Updated to support STSAFE-A110’s command access condition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Command authorization configuration : only supported for STSAFE-A110</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">StSafeA_RawCommand : Issue solved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">StSafeA_AssignLVResponse : Updated to return STSAFE-A1xx response length in case of response’s length &lt; expected response’s length</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Add __weak macro definition for GCC compiler</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Add SWAP2BYTES &amp; SWAP4BYTES macro definition for IAR, ARM, ARMV6 &amp; GCC compilers</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">__weak StSafeA_HostKeys_Init : Updated to return 0 when macro STSAFEA_USE_OPTIMIZATION_NO_HOST_MAC_ENCRYPT = 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MISRA-C 2012 compliance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="known-limitations">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ID: 573583</td>
+<td style="text-align: left;">Failure when IAR Compiler High Optimization option is set. “initial_value” variable not reserved on the memory stack.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="development-toolchains-and-compilers-4">Development Toolchains and Compilers</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different toolchains. It has been tested in applications developed using the following toolchains and compilers:</p>
+<ul>
+<li><p>IAR EWARM v8.40.1</p></li>
+<li><p>MDK-ARM v5.27.1</p></li>
+<li><p>SW4STM32 v2.9.1</p></li>
+</ul>
+<h2 id="supported-devices-and-boards-4">Supported Devices and Boards</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different STM32 microcontrollers. It has been tested in applications developed for the following devices and boards:</p>
+<ul>
+<li>NUCLEO-L476RG STM32L476</li>
+</ul>
+<h2 id="backward-compatibility-4">Backward Compatibility</h2>
+<p>There is backward compatibility with previous version (V3.0.0)</p>
+<h2 id="dependencies-4">Dependencies</h2>
+<p>This software release is compatible with:</p>
+<ul>
+<li><p>MbedTLS V2.17.0</p></li>
+<li><p>Cryptographic Library X-CUBE-CRYPTOLIB V3.1.0 + PATCH_CRYPTOLIB V3.1.2</p></li>
+<li><p>STM32L4xx HAL drivers V1.10.0</p></li>
+</ul>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V3.0.0 / 13-July-2019</summary></p>
+<h2 id="main-changes-5">Main Changes</h2>
+<h3 id="maintenance-release-5">Maintenance release</h3>
+<p>This is a major release implementing a completely new Middleware architecture that has been re-designed in order to:</p>
+<ul>
+<li><p>Improve Robustness and Security</p></li>
+<li><p>Improve Maintainability, Reliability, Scalability</p></li>
+</ul>
+<p><strong>Therefore there is no backward compatibility with previous releases.</strong></p>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New CORE module to simplify integration in customer applications</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">New CRYPTO module to isolate the secure/trusted area in flash (eg. behind Firewall / TrustZone) increasing the security level and reducing the attack surface</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New SERVICE module to allow hardware abstraction and platform independence</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MISRA-C 2012 compliance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="known-limitations-1">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ID: 573583</td>
+<td style="text-align: left;">Failure when IAR Compiler High Optimization option is set. “initial_value” variable not reserved on the memory stack.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="development-toolchains-and-compilers-5">Development Toolchains and Compilers</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different toolchains. It has been tested in applications developed using the following toolchains and compilers:</p>
+<ul>
+<li><p>IAR EWARM v8.32</p></li>
+<li><p>MDK-ARM v5.27</p></li>
+<li><p>SW4STM32 v2.9</p></li>
+</ul>
+<h2 id="supported-devices-and-boards-5">Supported Devices and Boards</h2>
+<p>The STSAFE-A1xx Middleware is easily portable on different STM32 microcontrollers. It has been tested in applications developed for the following devices and boards:</p>
+<ul>
+<li>NUCLEO-L476RG STM32L476</li>
+</ul>
+<h2 id="backward-compatibility-5">Backward Compatibility</h2>
+<p>There is no backward compatibility with previous versions</p>
+<h2 id="dependencies-5">Dependencies</h2>
+<p>This software release is compatible with:</p>
+<ul>
+<li><p>MbedTLS V2.14.0</p></li>
+<li><p>STM32 Crypto Library V3.0.0</p></li>
+<li><p>STM32L4xx HAL drivers V1.9.0</p></li>
+</ul>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.3.8 / 10-July-2019</summary></p>
+<h2 id="main-changes-6">Main Changes</h2>
+<h3 id="maintenance-release-6">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Add command size check for StSafeA_GenerateRandom function</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Remove STSAFE_A_WEAK_COM macro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Update endianness bytes swapping macro</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.3.7 / 11-December-2019</summary></p>
+<h2 id="main-changes-7">Main Changes</h2>
+<h3 id="maintenance-release-7">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CRC CCITT table correction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Add StSafeA_SetI2cParameters function to stsafe_a_basic.h &amp; .c</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.3.6 / 08-March-2019</summary></p>
+<h2 id="main-changes-8">Main Changes</h2>
+<h3 id="maintenance-release-8">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Move definition of StSafeA_DataBuffer structure into stsafe_a_common.h</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Move StSafeA_DataPartitionQuery function into stsafe_a_data_partition.h &amp; .c</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Move StSafeA_PublicKeySlotQuery function into stsafe_a_private_public_key.h &amp; .c</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Add command size check in case of EXCHANGE_BUFFER_SIZE != EXCHANGE_BUFFER_DEFAULT_SIZE (0x1FB)</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.3.5 / 08-February-2019</summary></p>
+<h2 id="main-changes-9">Main Changes</h2>
+<h3 id="maintenance-release-9">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Move STSAFE-A BSP files to STSAFE-A middleware</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Add SLA0088 license to STSAFE-A’s source files</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Add check command size to ovoid buffer overflow</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.3.4 / 11-December-2018</summary></p>
+<h2 id="main-changes-10">Main Changes</h2>
+<h3 id="maintenance-release-10">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hotfix for StSafeA_VerifyEntitySignature &amp; StSafeA_PublicKeySlotQuery</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fix usage of STM32 HW byte swap</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Optimize StSafeA_Update</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.3.3 / 20-July-2018</summary></p>
+<h2 id="main-changes-11">Main Changes</h2>
+<h3 id="maintenance-release-11">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Update “StSafeA_GenerateRandom” to solve issue with ephemeral random</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.3.1 / 04-July-2018</summary></p>
+<h2 id="main-changes-12">Main Changes</h2>
+<h3 id="maintenance-release-12">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adjust buffer size</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Add optimized bytes’ swap using ARM Instructions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Minor “StSafeA_GenerateRandom” update</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.3.0 / 25-June-2018</summary></p>
+<h2 id="main-changes-13">Main Changes</h2>
+<h3 id="maintenance-release-13">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Signature session functionality becomes optional (use STSAFE_A_SIGN_SESSION preprocessing flag to activate it)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Update “StSafeA_WrapLocalEnvelope”, “StSafeA_UnwrapLocalEnvelope”, “StSafeA_GenerateSignature” and “StSafeA_EstablishKey” to manage Host Encryption (Available from STSAFE-A110)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Update “StSafeA_RawCommand” to manage Host MAC</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Add “StSafeA_CommandAuthorizationConfigurationQuery”</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CRC computation optimization</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.2.0 / 19-March-2018</summary></p>
+<h2 id="main-changes-14">Main Changes</h2>
+<h3 id="maintenance-release-14">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">“StSafeA_PutPublicKeySlot” function added</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Move weak function preprocessing definition to “stsafe_a_types.h”</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Add STSAFE_A_INVALID_PARAMETER to “StSafeA_ResponseCode” enumeration</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Remove 1 byte memory alignment for “stsafe_a” type</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Correct “StSafeA_Hibernate” issue</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.1.0 / 04-December-2017</summary></p>
+<h2 id="main-changes-15">Main Changes</h2>
+<h3 id="maintenance-release-15">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V2.0.0 / 21-November-2017</summary></p>
+<h2 id="main-changes-16">Main Changes</h2>
+<h3 id="maintenance-release-16">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Update wrapper source code to add STSAFE-A110 device support</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V1.5.0 / 30-August-2017</summary></p>
+<h2 id="main-changes-17">Main Changes</h2>
+<h3 id="maintenance-release-17">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Correct typo issues</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Update StSafeA_GetHostCMacSequenceCounter return to void type</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Update StSafeA_ComputeCMAC &amp; StSafeA_ComputeRMAC to Remove dynamic allocation and Solve issue on RMAC computation with STM32 crypto library</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V1.4.0 / 30-June-2017</summary></p>
+<h2 id="main-changes-18">Main Changes</h2>
+<h3 id="maintenance-release-18">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Change <strong>AUTHENTICATION</strong> compilation flag to <strong>NO_HMAC</strong>; this allows STSAFE-A wrapper usage without C/R MAC support</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V1.3.0 / 28-March-2017</summary></p>
+<h2 id="main-changes-19">Main Changes</h2>
+<h3 id="maintenance-release-19">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Bug fix in CMAC computation (memory corruption) : stsafe_a_tools.c</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Modify buffer allocation: no more query with dynamic allocation, use static size instead : stsafe_a_configuration.c</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Add preprocessing flag commutation for AES table used for CRC computation: Static (flash) or dynamic (RAM) : stsafe_a_crc.c</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Modify template for I2C communication : stsafe_a_bus_conf_template.c</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V1.2.0 / 25-January-2017</summary></p>
+<h2 id="main-changes-20">Main Changes</h2>
+<h3 id="maintenance-release-20">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Update format of Tag, Length, Value structures (new name is TLVBuffer)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Update all wrapper sources file to be compliant with new TLVBuffer structure</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V1.1.0 / 14-December-2016</summary></p>
+<h2 id="main-changes-21">Main Changes</h2>
+<h3 id="maintenance-release-21">Maintenance release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rename stsafe_a_i2c_conf_template source (.c) &amp; header (.h) files to stsafe_a_bus_conf_template source (.c) &amp; header (.h) files into "Middlewares_A2C"</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rename stsafe_a_i2c_conf source (.c) &amp; header (.h) files to stsafe_a_bus_conf source (.c) &amp; header (.h) files from all projects into “Projects”</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Update stsafe_a_configuration.c source file</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+<details>
+<p><summary>V1.0.0 / 06-October-2016</summary></p>
+<h2 id="main-changes-22">Main Changes</h2>
+<h3 id="first-release">First release</h3>
+<p><u>Additional features :</u></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">First official version for STSAFE-A100 devices</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+</details>
+</div>
+</div>
+<footer class="sticky">
+<p>For complete documentation on <strong>STSAFE-A110</strong> , visit: [<a href="https://www.st.com/en/secure-mcus/stsafe-a110.html" target="_blank">STSAFE-A110 @ www.st.com</a>]</p>
+This release note uses up to date web standards and, for this reason, should not be opened with Internet Explorer but preferably with popular browsers such as Google Chrome, Mozilla Firefox, Opera or Microsoft Edge.
+</footer>
+</body>
+</html>
