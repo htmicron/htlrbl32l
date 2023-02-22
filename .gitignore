@@ -7,7 +7,6 @@
 *.axf
 *.htm
 *.lnp
-*.bin
 *.hex
 *.map
 *.Bak
