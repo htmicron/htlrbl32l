@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<targetDefinitions>
+  <board id="steval-idb011v1">
+    <name>steval-idb011v1</name>
+    <socId>bluenrg-355mc</socId>
+    <dbgIF/>
+    <dbgDEV/>
+  </board>
+</targetDefinitions>

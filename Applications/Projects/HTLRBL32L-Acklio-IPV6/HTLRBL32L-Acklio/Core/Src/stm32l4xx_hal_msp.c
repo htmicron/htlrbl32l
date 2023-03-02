@@ -1,0 +1,115 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file         stm32l4xx_hal_msp.c
+  * @brief        This file provides code for the MSP Initialization
+  *               and de-Initialization codes.
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under Ultimate Liberty license
+  * SLA0044, the "License"; You may not use this file except in compliance with
+  * the License. You may obtain a copy of the License at:
+  *                             www.st.com/SLA0044
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "radio.h"
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN TD */
+
+/* USER CODE END TD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN Define */
+
+/* USER CODE END Define */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN Macro */
+
+/* USER CODE END Macro */
+
+/* Private variables ---------------------------------------------------------*/
+/* USER CODE BEGIN PV */
+
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+/* USER CODE BEGIN PFP */
+
+/* USER CODE END PFP */
+
+/* External functions --------------------------------------------------------*/
+/* USER CODE BEGIN ExternalFunctions */
+
+/* USER CODE END ExternalFunctions */
+
+/* USER CODE BEGIN 0 */
+//EXTI_HandleTypeDef HEXTI_InitStructure;
+EXTI_HandleTypeDef hRADIO_DIO_exti[1];
+/* USER CODE END 0 */
+/**
+  * Initializes the Global MSP.
+  */
+void HAL_MspInit(void)
+{
+  /* USER CODE BEGIN MspInit 0 */
+
+  /* USER CODE END MspInit 0 */
+
+  HAL_NVIC_SetPriority(SysTick_IRQn,0);
+	
+  __HAL_RCC_SYSCFG_CLK_ENABLE();
+
+
+  /* USER CODE BEGIN MspInit 1 */
+
+  /* USER CODE END MspInit 1 */
+}
+void IRQHandler_Config(void)
+{
+//  GPIO_InitTypeDef   GPIO_InitStructure;
+//
+//  EXTI_ConfigTypeDef EXTI_Config_InitStructure;
+//
+//  /* Enable GPIOC clock */
+//  __HAL_RCC_GPIOB_CLK_ENABLE();
+//
+//  /* Configure PB.4 pin as input floating */
+//  GPIO_InitStructure.Mode = GPIO_MODE_INPUT;
+//  GPIO_InitStructure.Pull = GPIO_NOPULL;
+//  GPIO_InitStructure.Pin = GPIO_PIN_4;
+//  HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);
+//
+//  EXTI_Config_InitStructure.Line =    EXTI_LINE_PB4;
+//  EXTI_Config_InitStructure.Trigger = EXTI_TRIGGER_RISING_EDGE;
+//  EXTI_Config_InitStructure.Type =    EXTI_TYPE_EDGE;
+//
+//  HAL_EXTI_SetConfigLine(&hRADIO_DIO_exti[0], &EXTI_Config_InitStructure);
+//  //&hRADIO_DIO_exti[0], HAL_EXTI_COMMON_CB_ID, irqHandlers[0]);
+//  HAL_EXTI_RegisterCallback(&hRADIO_DIO_exti[0], HAL_EXTI_COMMON_CB_ID, irqHandlers[0]);
+//  HAL_EXTI_Cmd(&hRADIO_DIO_exti[0] , ENABLE);
+//
+//  HAL_EXTI_ClearPending(&hRADIO_DIO_exti[0]);
+//
+//  /* Enable and set line 10 Interrupt to the lowest priority */
+//  HAL_NVIC_SetPriority(GPIOB_IRQn,2);
+//  HAL_NVIC_EnableIRQ(GPIOB_IRQn);
+}
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
