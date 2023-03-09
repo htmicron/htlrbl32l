@@ -21,8 +21,6 @@ We have some applications that you can use to start developing your own solution
 | [TagoIO](Applications/Projects/LoRaWAN_TagoIO_DashBoard) | Complete TagoIO integration example. |
 | [BLE-LoRa](Applications/Projects/PushButton_LoRaWAN-Bluetooth) | BLE and LoRaWAN joint example |
 | [Push-Button](Applications/Projects/PushButton_LoRaWAN) | Basic LoRaWAN pushbutton example. |
-| [IPV6-SCHC](Applications/Projects/HTLRBL32L-Acklio-IPV6) | SCHC IPV6 example. |
-
 
 
 <hr>
