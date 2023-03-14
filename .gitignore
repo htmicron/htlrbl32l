@@ -12,4 +12,5 @@
 *.Bak
 *.scvd
 *.mk
+*.elf
 */Debug/*

@@ -37,16 +37,16 @@
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="fr.ac6.ide.wise.managedbuild.option.c.compiler.include.paths.2138375269" name="Include paths (-I)" superClass="fr.ac6.ide.wise.managedbuild.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../Inc"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Crypto/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Mac/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Mac/Region/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/SX126X/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/LoRaWAN/Utils/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/Drivers/CMSIS/Device/ST/BlueNRG_LP/Include"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/Drivers/CMSIS/Include"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/Drivers/Peripherals_Drivers/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../HTLRBL32L-SDK/Middlewares/ST/hal/Inc"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Core/Inc"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Crypto/Inc"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Mac/Inc"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/LoRaWAN/lorawan_specifics/Mac/Region/Inc"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/LoRaWAN/SX126X/Inc"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/LoRaWAN/Utils/Inc"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/Drivers/CMSIS/Device/ST/BlueNRG_LP/Include"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/Drivers/Peripherals_Drivers/Inc"/>
+									<listOptionValue builtIn="false" value="../../../HTLRBL32L-SDK/Middlewares/ST/hal/Inc"/>
 								</option>
 								<option id="fr.ac6.ide.wise.managedbuild.option.c.compiler.std.615409422" name="Language standard" superClass="fr.ac6.ide.wise.managedbuild.option.c.compiler.std" useByScannerDiscovery="true" value="fr.ac6.ide.wise.managedbuild.option.c.compiler.std.gnu99" valueType="enumerated"/>
 								<inputType id="fr.ac6.ide.wise.managedbuild.tool.c.compiler.input.1479557496" superClass="fr.ac6.ide.wise.managedbuild.tool.c.compiler.input"/>

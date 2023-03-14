@@ -61,7 +61,7 @@ all: HTLRBL32L-PushButton_LoRaWAN_Bluetooth.elf secondary-outputs
 HTLRBL32L-PushButton_LoRaWAN_Bluetooth.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -nostartfiles -nodefaultlibs -Wl,--gc-sections -Wl,-Map="HTLRBL32L-PushButton_LoRaWAN_Bluetooth.map" -T"../HTLRBL32L.ld" -L../../../../HTLRBL32L-SDK/Middlewares/ST/cryptolib -L../../../../HTLRBL32L-SDK/Middlewares/ST/Bluetooth_LE/library -Wl,--cref --specs=nano.specs -o "HTLRBL32L-PushButton_LoRaWAN_Bluetooth.elf"  -Wl,--start-group @"objects.list" $(USER_OBJS) $(LIBS) -lm -lc  -Wl,--end-group
+	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -nostartfiles -nodefaultlibs -Wl,--gc-sections -Wl,-Map="HTLRBL32L-PushButton_LoRaWAN_Bluetooth.map" -T"../HTLRBL32L.ld" -L../../../HTLRBL32L-SDK/Middlewares/ST/cryptolib -L../../../HTLRBL32L-SDK/Middlewares/ST/Bluetooth_LE/library -Wl,--cref --specs=nano.specs -o "HTLRBL32L-PushButton_LoRaWAN_Bluetooth.elf"  -Wl,--start-group @"objects.list" $(USER_OBJS) $(LIBS) -lm -lc  -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
