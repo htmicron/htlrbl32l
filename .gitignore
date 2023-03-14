@@ -1,3 +1,4 @@
+*.tmp
 *.uvguix.*
 *.o
 *.d
