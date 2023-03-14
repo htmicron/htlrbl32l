@@ -34,8 +34,8 @@ Register your interest in iMCP - HTLRBL32L in the form: https://forms.office.com
 
 <br/>
 
-* iMCP HTLRBL32L Firmware Examples: [**HERE**](https://github.com/htmicron/htlrbl32l/tree/SDK)
-
+* iMCP HTLRBL32L Firmware Examples and documentation: [**HERE**](https://github.com/htmicron/htlrbl32l/tree/SDK)
+* Evaluation board PCB designs [**HERE**](https://github.com/htmicron/htlrbl32l/tree/documents)
 <br/>
 <hr>
 
