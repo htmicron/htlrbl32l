@@ -52,7 +52,7 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 POST_BUILD_OBJCOPY += \
-PB_LoRaWAN_BLE_Project.bin \
+PB_LoRaWAN_BLE_Project.hex \
 
 POST_BUILD_PRINT_SIZE += \
 elf-size \
@@ -65,13 +65,13 @@ all: PB_LoRaWAN_BLE_Project.elf secondary-outputs
 PB_LoRaWAN_BLE_Project.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -nostartfiles -nodefaultlibs -Wl,--gc-sections -Wl,-Map="PB_LoRaWAN_BLE_Project.map" -T"../HTLRBL32L.ld" -L"C:\Users\christian.lehmen\Desktop\git\public\htlrbl32l\Examples\HTLRBL32L-SDK\Libraries" -L"C:\Users\christian.lehmen\Desktop\git\public\htlrbl32l\Examples\HTLRBL32L-SDK\Middlewares\ST\Bluetooth_LE\library" -L"C:\Users\christian.lehmen\Desktop\git\public\htlrbl32l\Examples\HTLRBL32L-SDK\Middlewares\ST\cryptolib" --specs=nano.specs -o "PB_LoRaWAN_BLE_Project.elf"  -Wl,--start-group @"objects.list" $(USER_OBJS) $(LIBS) -lm -lc  -Wl,--end-group
+	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -nostartfiles -nodefaultlibs -Wl,--gc-sections -Wl,-Map="PB_LoRaWAN_BLE_Project.map" -T"../HTLRBL32L.ld" -L"C:\Users\christian.lehmen\Desktop\git\htlrbl32l\Examples\HTLRBL32L-SDK\Libraries" -L"C:\Users\christian.lehmen\Desktop\git\htlrbl32l\Examples\HTLRBL32L-SDK\Middlewares\ST\Bluetooth_LE\library" -L"C:\Users\christian.lehmen\Desktop\git\htlrbl32l\Examples\HTLRBL32L-SDK\Middlewares\ST\cryptolib" --specs=nano.specs -o "PB_LoRaWAN_BLE_Project.elf"  -Wl,--start-group @"objects.list" $(USER_OBJS) $(LIBS) -lm -lc  -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-PB_LoRaWAN_BLE_Project.bin: PB_LoRaWAN_BLE_Project.elf
+PB_LoRaWAN_BLE_Project.hex: PB_LoRaWAN_BLE_Project.elf
 	@echo 'Invoking: Generate binary'
-	arm-none-eabi-objcopy -O binary "PB_LoRaWAN_BLE_Project.elf"  "PB_LoRaWAN_BLE_Project.bin"
+	arm-none-eabi-objcopy -O ihex "PB_LoRaWAN_BLE_Project.elf"  "PB_LoRaWAN_BLE_Project.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 

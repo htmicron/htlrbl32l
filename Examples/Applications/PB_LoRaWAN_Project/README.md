@@ -2,11 +2,10 @@
 
 - TTN gateway config. tutorial.
 - FW channels config. tutorial.
-- GATTbrowser config. tutorial.
 
 ## Application Description
 
-This application works using the android app GATTbrowser to, connected via bluetooth with the device, write the payload and send LoRa packets to the server.
+This application works using a button interrupt on pin PA4, which allows the user to command the SiP to write the payload and send LoRa packets to the server.
 
 The firmware configures some necessary peripherals, like USART1 (log purposes), GPIOs (radio interruption, etc.) and I2C (STsafe). 
 
@@ -21,7 +20,6 @@ This section describes the basic test setup to running this application.
 * [WiSE-Studio IDE](https://www.st.com/en/embedded-software/stsw-wise-studio.html).
 * RS232 terminal ([Termite](https://www.compuphase.com/software_termite.htm) is recommended).
 * [ST-Link Debugger](https://www.st.com/en/development-tools/st-link-v2.html) to flash a firmware.
-* [GATTbrowser android app](https://play.google.com/store/apps/details?id=com.renesas.ble.gattbrowser).
 * HTLRBL32 device.
 * Semtech SX1308 LoRa® Gateway.
 * FTDI (usb-serial converter – one for each device).
@@ -30,11 +28,11 @@ This section describes the basic test setup to running this application.
 
 1. Set your LoRaWAN keys (OTAA and/or ABP): <br/>
 
-If using the ST-SAFE module:							
+If using the ST-SAFE module:
 - Flash the binary "[HTLRBL32L_Provisioner.bin](https://github.com/htmicron/htlrbl32l/tree/SDK/Applications/Binaries)" using "[RF-Flasher Utility](https://www.st.com/en/embedded-software/stsw-bnrgflasher.html)".
 - Follow the instructions at the "[HTLRBL32L_Key_Provisioner_Manual](https://github.com/htmicron/htlrbl32l/tree/SDK/Key_Provisioner/Documentation)"
 - Save your setted keys to configure the TTN device later.
-Otherwise, you may define the LoRaWAN keys in the 'lorawandefines.h' header file after step 5.																							  
+Otherwise, you may define the LoRaWAN keys in the 'lorawandefines.h' header file after step 5.
 
 2. Clone the examples/SDK branch: <br/>
 
@@ -70,7 +68,7 @@ git clone --single-branch --branch SDK https://github.com/htmicron/htlrbl32l.git
 7. Open Termite and reset your device to check if the initial string was printed on serial. <br/>
 
 <div align="center">
-  <img src="Screenshots/termite.JPG">
+  <img src="Screenshots/termite.jpg">
 </div>
 
 <br/>
@@ -79,55 +77,12 @@ git clone --single-branch --branch SDK https://github.com/htmicron/htlrbl32l.git
 
 -  In the case OTAA is being used, the device will keep sending join requests until it has been able to join the server before entering deep sleep/awaiting user inputs.
 -  ST-SAFE is activated by the pre-processor symbol 'HT_CRYPTO'.
--  The 'DEEP_SLEEP_MODE' constant is used to define the behaviour of the SiP when awaiting user input. If disabled, the device will await for the interrupt triggered by the Bluetooth user input. If enabled, the device will enter deep sleep to reduce power consumption, and will only be "woken up" by user input.
+-  The 'DEEP_SLEEP_MODE' constant is used to define the behaviour of the SiP when awaiting user input. If disabled, the device will await for the interrupt triggered by the PA4 button press. If enabled, the device will enter deep sleep to reduce power consumption, and will only be "woken up" by user input (PA4).
 
 # The Things Network (TTN) Configuration
 
 - Create a TTN account at "[TTN website](https://www.thethingsnetwork.org/)" and follow the "[guide](https://www.thethingsnetwork.org/docs/gateways/)" to your gateway. <br/>
 - Use the keys you set earlier to add your device in the TTN network.
-
-# GATTbrowser
-
-- Download [GATTbrowser android app](https://play.google.com/store/apps/details?id=com.renesas.ble.gattbrowser).
-- Open the app and click to open the PushButton device: <br/>
-
-<div align="center">
-  <img src="Screenshots/bledevice.jpg">
-</div>
-
-<br/>
-
-- Once the device is connected: <br/>
-
-<div align="center">
-  <img src="Screenshots/connected.jpg">
-</div>
-
-<br/>
-
-- Click here to go into the read/write page: <br/>
-
-<div align="center">
-  <img src="Screenshots/packetpage.jpg">
-</div>
-
-<br/>
-
-- You can choose between a string and hexadecimal payload. Write the payload as the picture and click the write button: <br/>
-
-<div align="center">
-  <img src="Screenshots/write.jpg">
-</div>
-
-<br/>
-
-- You sent this payload via LoRaWAN to your TTN network server. <br/>
-
-<div align="center">
-  <img src="Screenshots/lorasent.jpg">
-</div>
-
-<br/> 
 
 ## Extra Documentation
 

@@ -165,11 +165,7 @@
                             							
                             <tool id="fr.ac6.ide.wise.managedbuild.tool.archiver.1868705931" name="GCC Archiver" superClass="fr.ac6.ide.wise.managedbuild.tool.archiver"/>
                             							
-                            <tool id="fr.ac6.ide.wise.managedbuild.tool.objcopy.1966632796" name="Generate binary" superClass="fr.ac6.ide.wise.managedbuild.tool.objcopy">
-                                								
-                                <option id="fr.ac6.ide.wise.managedbuild.option.objcopy.format.1010975824" superClass="fr.ac6.ide.wise.managedbuild.option.objcopy.format" useByScannerDiscovery="false" value="fr.ac6.ide.wise.managedbuild.option.objcopy.format.bin" valueType="enumerated"/>
-                                							
-                            </tool>
+                            <tool id="fr.ac6.ide.wise.managedbuild.tool.objcopy.1966632796" name="Generate binary" superClass="fr.ac6.ide.wise.managedbuild.tool.objcopy"/>
                             							
                             <tool id="fr.ac6.ide.wise.managedbuild.tool.size.1239938539" name="Print Size" superClass="fr.ac6.ide.wise.managedbuild.tool.size"/>
                             						

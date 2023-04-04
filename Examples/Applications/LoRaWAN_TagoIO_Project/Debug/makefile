@@ -56,7 +56,7 @@ all: LoRaWAN_TagoIO_Project.elf secondary-outputs
 LoRaWAN_TagoIO_Project.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -Wl,--gc-sections -Wl,-Map="LoRaWAN_TagoIO_Project.map" -T"../HTLRBL32L.ld" -L"C:\Users\christian.lehmen\Desktop\git\public\htlrbl32l\Examples\HTLRBL32L-SDK\Libraries" -o "LoRaWAN_TagoIO_Project.elf"  -Wl,--start-group @"objects.list" $(USER_OBJS) $(LIBS) -lm -lc  -Wl,--end-group
+	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -Wl,--gc-sections -Wl,-Map="LoRaWAN_TagoIO_Project.map" -T"../HTLRBL32L.ld" -L"C:\Users\christian.lehmen\Desktop\git\htlrbl32l\Examples\HTLRBL32L-SDK\Libraries" -o "LoRaWAN_TagoIO_Project.elf"  -Wl,--start-group @"objects.list" $(USER_OBJS) $(LIBS) -lm -lc  -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
