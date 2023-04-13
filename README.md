@@ -12,7 +12,7 @@ Designed and manufactured in Brazil, the chip (iMCP HTLRBL32L) uses two communic
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/info.svg">
    <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
-</picture><br>
+</picture>
 Register your interest in iMCP - HTLRBL32L in the form: https://forms.office.com/r/nvTXCTS5je
 
 
