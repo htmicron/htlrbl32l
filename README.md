@@ -8,12 +8,7 @@
 
 Designed and manufactured in Brazil, the chip (iMCP HTLRBL32L) uses two communication protocols: LoRa® & Bluetooth®. Integrated within a small footprint 13x13x1.1mm chip, these connectivities are ready-to-use, just add a battery and an antenna to the chip to get an IoT device.
 
-:triangular_flag_on_post: 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/info.svg">
-   <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
-</picture>
-Register your interest in iMCP - HTLRBL32L in the form: https://forms.office.com/r/nvTXCTS5je
+:triangular_flag_on_post: Register your interest in iMCP - HTLRBL32L in the form: https://forms.office.com/r/nvTXCTS5je
 
 
 
