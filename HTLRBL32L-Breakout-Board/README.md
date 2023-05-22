@@ -6,7 +6,7 @@ the HTLRBL32L are present on this board.
 On this page you will find all the information available for the HTLRBL32L Breakout Board, from datasheet to gerbers if you wish to fabricate it yourself.
 
 <div align="center">
-  <img src="HTLRBL32L-Breakout-Board/HTLRBL32L_breakout.jpg">
+  <img src="HTLRBL32L_breakout.jpg">
 </div>
 <hr>
 
