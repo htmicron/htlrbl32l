@@ -69,7 +69,7 @@ static uint8_t DevEui[] = LORAWAN_DEVICE_EUI;
 static uint8_t JoinEui[] = LORAWAN_JOIN_EUI;
 #endif
 static uint8_t AppKey[] = LORAWAN_APP_KEY;
-static uint8_t NwkKey[] = LORAWAN_NWK_KEY;
+static uint8_t NwkKey[] = LORAWAN_APP_KEY;
 
 static MlmeReqJoin_t JoinParameters;
 
