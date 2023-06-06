@@ -34,8 +34,9 @@ Designed and manufactured in Brazil, the chip (iMCP HTLRBL32L) uses two communic
 
 <br/>
 
-* iMCP HTLRBL32L Firmware Examples and Documentation: [**HERE**](https://github.com/htmicron/htlrbl32l/tree/SDK)
-* Evaluation Board PCB Designs [**HERE**](https://github.com/htmicron/htlrbl32l/tree/documents)
+* [iMCP HTLRBL32L Datasheet](https://github.com/htmicron/htlrbl32l/tree/documents/HTLRBL32L-Datasheet)
+* [iMCP HTLRBL32L Firmware Examples and Documentation](https://github.com/htmicron/htlrbl32l/tree/SDK)
+* [Evaluation Board PCB Designs](https://github.com/htmicron/htlrbl32l/tree/documents)
 <br/>
 <hr>
 
