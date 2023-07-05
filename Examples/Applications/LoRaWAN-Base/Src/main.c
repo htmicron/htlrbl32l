@@ -65,14 +65,13 @@ int main(void) {
 		status_code = ht_crypto_init();
 		if(status_code){
 			printf("STSAFE-A1xx NOT initialized. \n");
-		while(1){}
+		while(1);
 		}
 	}else{
 		printf("LoRaWAN keys are NOT set, please flash&run provisioner firmware to set the keys\n");
 		while(1);
 	}
 #endif
-
 
 	LORAWAN_init(DEFAULT_REGION);
 	while (1){
