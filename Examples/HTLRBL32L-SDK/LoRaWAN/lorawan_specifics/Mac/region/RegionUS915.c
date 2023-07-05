@@ -522,7 +522,7 @@ void RegionUS915InitDefaults( InitDefaultsParams_t* params )
                 NvmCtx.Channels[i].Band = 0;
             }
 						
-			NvmCtx.ChannelsDefaultMask[0] = 0xFF00;
+			NvmCtx.ChannelsDefaultMask[0] = 0x00FF;
 			NvmCtx.ChannelsDefaultMask[1] = 0x0000;
 			NvmCtx.ChannelsDefaultMask[2] = 0x0000;
 			NvmCtx.ChannelsDefaultMask[3] = 0x0000;
