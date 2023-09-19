@@ -70,6 +70,8 @@
                                     <listOptionValue builtIn="false" value="CONFIG_HW_LS_RO"/>
                                     									
                                     <listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STSAFE"/>
                                     								
                                 </option>
                                 								

@@ -65,7 +65,7 @@ all: PB_LoRaWAN_BLE_Project.elf secondary-outputs
 PB_LoRaWAN_BLE_Project.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -nostartfiles -nodefaultlibs -Wl,--gc-sections -Wl,-Map="PB_LoRaWAN_BLE_Project.map" -T"../HTLRBL32L.ld" -L"C:\Users\christian.lehmen\Desktop\git\htlrbl32l\Examples\HTLRBL32L-SDK\Libraries" -L"C:\Users\christian.lehmen\Desktop\git\htlrbl32l\Examples\HTLRBL32L-SDK\Middlewares\ST\Bluetooth_LE\library" -L"C:\Users\christian.lehmen\Desktop\git\htlrbl32l\Examples\HTLRBL32L-SDK\Middlewares\ST\cryptolib" --specs=nano.specs -o "PB_LoRaWAN_BLE_Project.elf"  -Wl,--start-group @"objects.list" $(USER_OBJS) $(LIBS) -lm -lc  -Wl,--end-group
+	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -nostartfiles -nodefaultlibs -Wl,--gc-sections -Wl,-Map="PB_LoRaWAN_BLE_Project.map" -T"../HTLRBL32L.ld" -L"C:\Users\eduardo.mendel\git\teste_fk\htlrbl32l\Examples\HTLRBL32L-SDK\Libraries" -L"C:\Users\eduardo.mendel\git\teste_fk\htlrbl32l\Examples\HTLRBL32L-SDK\Middlewares\ST\Bluetooth_LE\library" -L"C:\Users\eduardo.mendel\git\teste_fk\htlrbl32l\Examples\HTLRBL32L-SDK\Middlewares\ST\cryptolib" --specs=nano.specs -o "PB_LoRaWAN_BLE_Project.elf"  -Wl,--start-group @"objects.list" $(USER_OBJS) $(LIBS) -lm -lc  -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -59,6 +59,10 @@
                                     									
                                     <listOptionValue builtIn="false" value="OVER_THE_AIR_ACTIVATION=0"/>
                                     									
+                                    <listOptionValue builtIn="false" value="DEEP_SLEEP_MODE=1"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STSAFE"/>
+                                    									
                                     <listOptionValue builtIn="false" value="CONFIG_HW_HSE_TUNE=32"/>
                                     									
                                     <listOptionValue builtIn="false" value="CONFIG_HW_SMPS_10uH"/>

@@ -44,7 +44,7 @@ int main(void) {
 	uint8_t status_code = 0;
 
 	/* System initialization function */
-	if (SystemInit(SYSCLK_64M, BLE_SYSCLK_NONE) != SUCCESS) {
+	if (SystemInit(SYSCLK_DIRECT_HSE, BLE_SYSCLK_NONE) != SUCCESS) {
 		/* Error during system clock configuration take appropriate action */
 		while(1);
 	}
@@ -63,18 +63,7 @@ int main(void) {
 	MX_SPI1_Init();
 	MX_RNG_Init(&hrng);
 
-#ifdef HT_CRYPTO
-	if(keys_provisioned()){
-		status_code = ht_crypto_init();
-		if(status_code){
-			printf("STSAFE-A1xx NOT initialized. \n");
-		while(1){}
-		}
-	}else{
-		printf("LoRaWAN keys are NOT set, please flash&run provisioner firmware to set the keys\n");
-		while(1);
-	}
-#endif
+	HSM_Init();
 
 #if DEEP_SLEEP_MODE == 1
 	HT_PB_ConfigWakeupIO();
@@ -83,8 +72,8 @@ int main(void) {
 	LORAWAN_init(DEFAULT_REGION);
 	HT_PB_Counter_init();
 	printf("HTLRBL32L - Push Button APP\n");
-	
-	
+
+
 	while (1){
 		LORAWAN_tick();
 		HT_PB_Fsm();
@@ -93,6 +82,32 @@ int main(void) {
 
 PowerSaveLevels App_PowerSaveLevel_Check(PowerSaveLevels level) {
 	return POWER_SAVE_LEVEL_STOP_NOTIMER;
+}
+
+void HSM_Init(){
+
+	uint8_t status_code = 0;
+#ifdef STSAFE
+#ifdef HT_CRYPTO
+	if(keys_provisioned()){
+#endif
+
+		status_code = ht_crypto_init();
+		if(status_code){
+			printf("STSAFE-A1xx NOT initialized. \n");
+			while(1);
+		}
+
+#ifdef HT_CRYPTO
+	}else{
+		printf("LoRaWAN keys are NOT set, please flash&run provisioner firmware to set the keys\n");
+		//while(1);
+	}
+#endif
+#ifndef HT_CRYPTO
+	ht_crypto_hibernate();
+#endif
+#endif
 }
 
 /**
