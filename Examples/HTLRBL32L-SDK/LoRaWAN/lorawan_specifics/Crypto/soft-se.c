@@ -355,9 +355,7 @@ SecureElementStatus_t SecureElementAesEncrypt( uint8_t* buffer, uint16_t size, K
 
 SecureElementStatus_t SecureElementDeriveAndStoreKey( Version_t version, uint8_t* input, KeyIdentifier_t rootKeyID, KeyIdentifier_t targetKeyID )
 {
-#ifdef HT_CRYPTO
-	return (ht_derive_store(version,  input,  rootKeyID,  targetKeyID,  OVER_THE_AIR_ACTIVATION));
-#else
+
     if( input == NULL )
     {
         return SECURE_ELEMENT_ERROR_NPE;
@@ -390,7 +388,7 @@ SecureElementStatus_t SecureElementDeriveAndStoreKey( Version_t version, uint8_t
     }
 
     return SECURE_ELEMENT_SUCCESS;
-#endif
+
 }
 
 SecureElementStatus_t SecureElementRandomNumber( uint32_t* randomNum )
