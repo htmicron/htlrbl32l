@@ -1,7 +1,7 @@
 # iMCP HTLRBL32L - New System-in-Package LoRa® & Bluetooth Low Energy®
 
 <div align="center">
-  <img src='.gitkeep/htlrbl32l.png' id="topology" height="30%" width="30%"/>
+  <img src='.gitkeep/htlrbl32l.png' id="topology" height="45%" width="45%"/>
 </div>
 
 <br/>
@@ -10,16 +10,7 @@ Designed and manufactured in Brazil, the chip (iMCP HTLRBL32L) uses two communic
 
 :triangular_flag_on_post: **Register your interest in iMCP - HTLRBL32L in the form:** https://forms.office.com/r/nvTXCTS5je
 
-
-
 <br/>
-
-# LoRaWAN World Expo 2022
-
-<div align="center">
-  <img src='.gitkeep/lorawan_expo.jpg' id="topology" height="100%" width="100%"/>
-</div>
-
 
 <br/>
 
