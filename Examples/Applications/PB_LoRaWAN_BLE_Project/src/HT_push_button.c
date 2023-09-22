@@ -197,6 +197,7 @@ static void HT_PB_RxLoraState(void) {
 
 	rx_flag = 1;
 	state = SM_WAIT_FOR_EVENT;
+	lora_process = PROCESS_LORA_READY;
 }
 
 static void HT_PB_WritePayloadState(void) {
@@ -254,5 +255,6 @@ void HT_PB_Counter_init(void){
 
 static void OnPushCounterEvent(void *context){
 	PushCounterFlag = 1;
+	lora_process = PROCESS_LORA_READY;
 }
 /************************ HT MICRON SEMICONDUCTORS S.A - HT_push_button.c *****END OF FILE****/

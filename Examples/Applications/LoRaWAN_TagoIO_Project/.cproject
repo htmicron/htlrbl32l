@@ -161,7 +161,7 @@
                             							
                             <tool id="fr.ac6.ide.wise.managedbuild.tool.objcopy.1648117506" name="Generate binary" superClass="fr.ac6.ide.wise.managedbuild.tool.objcopy">
                                 								
-                                <option id="fr.ac6.ide.wise.managedbuild.option.objcopy.format.1733769060" superClass="fr.ac6.ide.wise.managedbuild.option.objcopy.format" useByScannerDiscovery="false" value="fr.ac6.ide.wise.managedbuild.option.objcopy.format.bin" valueType="enumerated"/>
+                                <option id="fr.ac6.ide.wise.managedbuild.option.objcopy.format.1733769060" name="Output file format" superClass="fr.ac6.ide.wise.managedbuild.option.objcopy.format" useByScannerDiscovery="false" value="fr.ac6.ide.wise.managedbuild.option.objcopy.format.bin" valueType="enumerated"/>
                                 							
                             </tool>
                             							

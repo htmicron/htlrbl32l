@@ -23,12 +23,11 @@ typedef enum keytypes{
 StSafeA_ResponseCode_t ht_crypto_init(void);
 
 SecureElementStatus_t ht_aes_encrypt( uint8_t* buffer, uint16_t size, KeyIdentifier_t keyID, uint8_t* encBuffer,uint8_t activation_mode );
-SecureElementStatus_t stsafe_aes_decrypt( uint8_t* buffer, uint16_t size, KeyIdentifier_t keyID, uint8_t* encBuffer );
 SecureElementStatus_t ht_compute_cmac( uint8_t *micBxBuffer, uint8_t *buffer, uint16_t size, KeyIdentifier_t keyID, uint32_t* cmac,uint8_t activation_mode );
 SecureElementStatus_t ht_verify_cmac( uint8_t* buffer, uint16_t size, uint32_t expectedCmac, KeyIdentifier_t keyID, uint8_t activation_mode );
 ht_key_types keyIDTranslation(KeyIdentifier_t keyID,uint8_t activation_mode);
 SecureElementStatus_t ht_key_set( KeyIdentifier_t keyID, uint8_t* key,uint8_t activation_mode );
-SecureElementStatus_t ht_derive_store(Version_t version, uint8_t* input, KeyIdentifier_t rootKeyID, KeyIdentifier_t targetKeyID, uint8_t activation_mode );
+SecureElementStatus_t ht_crypto_hibernate(void);
 
 uint8_t get_dev_addr(uint32_t *key);
 uint8_t get_dev_eui(uint8_t *key);

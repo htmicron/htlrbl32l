@@ -100,6 +100,7 @@ void HT_GPIO_EnableButtonIRQN(void);
 /* Private variables ---------------------------------------------------------*/
 
 /* Private function prototypes -----------------------------------------------*/
+void HSM_Init(void);
 
 /* Private variables ---------------------------------------------------------*/
 
