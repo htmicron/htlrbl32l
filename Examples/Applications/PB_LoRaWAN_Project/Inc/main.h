@@ -73,6 +73,7 @@ void MX_GPIO_LP_Init(void);
 /* Private variables ---------------------------------------------------------*/
 
 /* Private function prototypes -----------------------------------------------*/
+void HSM_Init(void);
 
 /* Private variables ---------------------------------------------------------*/
 
