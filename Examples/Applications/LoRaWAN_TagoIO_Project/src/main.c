@@ -59,22 +59,10 @@ int main(void) {
 	MX_GPIO_LP_Init();
 	MX_RNG_Init(&hrng);
 	
+	HSM_Init();
+
 	printf("HTLRBL32 - Web Platform (TagoIO) Application\n");	
 	
-	#ifdef HT_CRYPTO
-
-		if(keys_provisioned()){
-			status_code = ht_crypto_init();
-			if(status_code){
-				printf("STSAFE-A1xx NOT initialized. \n");
-			while(1){}
-			}
-		}else{
-			printf("LoRaWAN keys are NOT set, please flash&run provisioner firmware to set the keys\n");
-			while(1);
-		}
-	#endif
-
 
 	LORAWAN_init(DEFAULT_REGION);	
 	
@@ -89,6 +77,32 @@ int main(void) {
 		LORAWAN_tick(); /*handle radio routine*/
 	}
 
+}
+
+void HSM_Init(){
+
+	uint8_t status_code = 0;
+#ifdef STSAFE
+#ifdef HT_CRYPTO
+	if(keys_provisioned()){
+#endif
+
+		status_code = ht_crypto_init();
+		if(status_code){
+			printf("STSAFE-A1xx NOT initialized. \n");
+			while(1);
+		}
+
+#ifdef HT_CRYPTO
+	}else{
+		printf("LoRaWAN keys are NOT set, please flash&run provisioner firmware to set the keys\n");
+		//while(1);
+	}
+#endif
+#ifndef HT_CRYPTO
+	ht_crypto_hibernate();
+#endif
+#endif
 }
 
 /**

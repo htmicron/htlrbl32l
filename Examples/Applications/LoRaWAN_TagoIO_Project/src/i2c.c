@@ -21,7 +21,7 @@ I2C_HandleTypeDef hi2c2; // SENSORS
 
 int32_t MX_I2C1_Init(void) {
 
-#ifdef HT_CRYPTO
+#ifdef STSAFE
 	hi2c.Instance = I2C1;
 	hi2c.Init.Timing = 0x10320309;
 	hi2c.Init.OwnAddress1 = 0;

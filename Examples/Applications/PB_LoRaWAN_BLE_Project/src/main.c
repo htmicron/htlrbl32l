@@ -137,17 +137,6 @@ PowerSaveLevels App_PowerSaveLevel_Check(PowerSaveLevels level) {
 	return POWER_SAVE_LEVEL_STOP_NOTIMER;
 }
 
-/**
- * @brief  This function is executed in case of error occurrence.
- * @retval None
- */
-void Error_Handler(void)
-{
-	/* User can add his own implementation to report the HAL error return state */
-	printf("Error_Handler\n");
-	while(1);
-}
-
 void HSM_Init(){
 
 	uint8_t status_code = 0;
@@ -172,6 +161,17 @@ void HSM_Init(){
 	ht_crypto_hibernate();
 #endif
 #endif
+}
+
+/**
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
+void Error_Handler(void)
+{
+	/* User can add his own implementation to report the HAL error return state */
+	printf("Error_Handler\n");
+	while(1);
 }
 
 

@@ -50,6 +50,9 @@
 /* Private includes ----------------------------------------------------------*/
 #include <stdio.h>
 
+/* Private function prototypes -----------------------------------------------*/
+void HSM_Init(void);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
