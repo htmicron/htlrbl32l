@@ -23,8 +23,9 @@ Designed and manufactured in Brazil, the chip (iMCP HTLRBL32L) uses two communic
 
 ## iMCP HTLRBL32L - SDK
 
+**If you're new to the IoT environment or want to learn more about the HTLBL32L, we offer a [course](https://hanaelectronics.com.br/capacitacao/) based on our device. The training course will walk through every step of development, from first contact to complete applications using the device's most proeminent features.**
 <br/>
-
+* [iMCP HTLRBL32L Training Course](https://hanaelectronics.com.br/capacitacao/)
 * [iMCP HTLRBL32L Datasheet](https://github.com/htmicron/htlrbl32l/tree/documents/HTLRBL32L-Datasheet)
 * [iMCP HTLRBL32L Firmware Examples and Documentation](https://github.com/htmicron/htlrbl32l/tree/SDK)
 * [Evaluation Board PCB Designs](https://github.com/htmicron/htlrbl32l/tree/documents)
