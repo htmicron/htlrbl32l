@@ -4,7 +4,11 @@ This application has the objective of making the first contact with the HTLRBL32
 
 ### Serial Terminal Setup
 
-**** put a pic of pins TX(PA9) and RX(PA8) to a USB-Serial converter and connecting to a computer or simply connecting it to another microcontroller with a UART interface
+To use the UART interface you can choose between 
+- connect the pins TX(PA9) and RX(PA8) to a USB-Serial converter and connecting it to a computer
+- connect to another microcontroller with a UART interface
+
+The parameters values to configure the serial communication are shown bellow
 
 | Parameter    | Value      |
 | ---------------- | ---------- |
@@ -17,6 +21,8 @@ This application has the objective of making the first contact with the HTLRBL32
 
 ## AT Command Syntax
 
+In the table bellow, you can see how the syntax is interpreted by the hardware
+
 | **Command**         | **Description**                    |
 | ------------------- | ---------------------------------- |
 | AT+CMD=?            | Read the parameter value           |
@@ -24,6 +30,8 @@ This application has the objective of making the first contact with the HTLRBL32
 | AT+CMD=<parameters> | Executes a command with parameters |
 
 ## General Commands
+
+To send commands, the used syntax is the one shown bellow
 
 | **Command**      | **Parameter**    | **Description**             |
 | ---------------- | ---------------- | --------------------------- |
