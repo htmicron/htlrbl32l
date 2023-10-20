@@ -29,6 +29,7 @@ extern "C" {
 #include "rf_driver_hal.h"
 #include "rf_driver_ll_rtc.h"
 #include "utils.h"
+#include "LoRaMac.h"
 
 
 /* Private includes ----------------------------------------------------------*/
@@ -54,6 +55,7 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 
+/* Exported variables ---------------------------------------------------------*/
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
