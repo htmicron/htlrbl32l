@@ -29,7 +29,14 @@ extern "C" {
 #include "rf_driver_hal.h"
 #include "rf_driver_ll_rtc.h"
 #include "utils.h"
-#include "LoRaMac.h"
+
+/* FreeRTOS includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "rf_driver_hal_power_manager.h"
+#include "freertos_ble.h"
 
 
 /* Private includes ----------------------------------------------------------*/
@@ -56,6 +63,17 @@ extern "C" {
 /* Exported macro ------------------------------------------------------------*/
 
 /* Exported variables ---------------------------------------------------------*/
+extern SemaphoreHandle_t LoRaSemaphoreHandle;
+/* Binary semaphore used to synchronize Stack Tick and radio ISR. */
+extern SemaphoreHandle_t RadioIRQSemaphoreHandle;
+/* Mutex used to avoid that the BLE Stack Tick can be interrupted by an ACI
+   function in another thread. */
+extern SemaphoreHandle_t TestSemaphoreHandle;
+/* Mutex used to access UART resource */
+extern SemaphoreHandle_t UARTSemaphoreHandle;
+
+extern TaskHandle_t testHandle;
+extern TaskHandle_t loraHandle;
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
