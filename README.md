@@ -22,6 +22,8 @@ We have some applications that you can use to start developing your own solution
 | [BLE-LoRa](Examples/Applications/PB_LoRaWAN_BLE_Project) | BLE and LoRaWAN joint example |
 | [Push-Button](Examples/Applications/PB_LoRaWAN_Project) | Basic LoRaWAN pushbutton example. |
 | [IPV6-SCHC](Examples/Applications/HTLRBL32L-Acklio-IPV6) | SCHC IPV6 example. |
+| [FreeRTOS](Examples/Applications/FreeRTOS-LoRaWAN) | LoRaBase running on FreeRTOS example. |
+
 
 
 <hr>
