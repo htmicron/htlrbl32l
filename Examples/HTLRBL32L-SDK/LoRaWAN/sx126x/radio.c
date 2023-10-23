@@ -960,7 +960,7 @@ void RadioSleep( void )
     params.Fields.WarmStart = 1;
     SX126xSetSleep( params );
 
-    HAL_Delay( 2 );
+    DelayMs( 2 );
 }
 
 void RadioStandby( void )
@@ -1157,7 +1157,7 @@ void RadioOnDioIrq( void* context )
 
 void RadioIrqProcess( void )
 {
-		HAL_Delay(5);
+		DelayMs(4);
         BACKUP_PRIMASK();
         __disable_irq( );
         // Clear IRQ flag
