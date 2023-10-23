@@ -51,7 +51,7 @@ To send commands, the used syntax is the one shown bellow
 To see the full device configuration, go to [Device Configuration](Documentation/Device_Configuration.md)
 
 ## Sending or Receving a message
-There are different types of messages used to transport MAC commands and application data. To see how to configure this messagens on HTLRBLE SiP, check [Packet send/receive](Documentation/Packet_send_receive.md).
+There are different types of messages used to transport MAC commands and application data. To see how to configure these messages on HTLRBL32L SiP, check [Packet send/receive](Documentation/Packet_send_receive.md).
 
 ## Max payload
 Maximum payload displays the maximum payload allowed for each datarate of each region, to check the table with the values for each region, go to [Max payload](Documentation/Max_payload.md).
