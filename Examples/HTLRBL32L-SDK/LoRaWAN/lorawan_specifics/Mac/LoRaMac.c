@@ -354,6 +354,7 @@ typedef struct sLoRaMacCtx
  * Module context.
  */
 static LoRaMacCtx_t MacCtx;
+LoRaMacFlags_t* pMacCtxFlags = &(MacCtx.MacFlags);
 
 /*
  * Non-volatile module context.

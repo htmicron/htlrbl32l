@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>FreeRTOS-LoRaWAN</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+		<nature>fr.ac6.ide.wise.core.wiseNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>HTLRBL32L-SDK</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/HTLRBL32L-SDK</locationURI>
+		</link>
+		<link>
+			<name>Inc</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Inc</locationURI>
+		</link>
+		<link>
+			<name>Src</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Src</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
