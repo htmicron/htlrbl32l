@@ -41,7 +41,7 @@ To send commands, the used syntax is the one shown bellow
 ## Device configuration
 
 > [!IMPORTANT]
-> The [Device Configuration](Documentation/Device_Configuration.md) section has all the commands necessary to configure the device. If you need to understand what these parameters means, access this [Link](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/)
+> The [Device Configuration](https://github.com/htmicron/htlrbl32l/blob/SDK/Examples/Applications/HTLRBL32L-AT-Commands/Documentation/Device_Configuration.md) section has all the commands necessary to configure the device. If you need to understand what these parameters means, access this [Link](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/)
 
 | **Command**       | **Parameter**             | **Description**        |
 | ----------------- | ------------------------- | ---------------------- |
