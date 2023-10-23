@@ -2646,6 +2646,8 @@ LoRaMacStatus_t LoRaMacMlmeRequest( MlmeReq_t* mlmeRequest );
  */
 LoRaMacStatus_t LoRaMacMcpsRequest( McpsReq_t* mcpsRequest );
 
+extern LoRaMacFlags_t* pMacCtxFlags;
+
 /*!
  * Automatically add the Region.h file at the end of LoRaMac.h file.
  * This is required because Region.h uses definitions from LoRaMac.h
