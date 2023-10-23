@@ -2,6 +2,8 @@
 
 After every command and during special events the system will return a hexadecimal 4-byte error code referring to possible errors during the execution, using this format: 
 
+![Error Codes](https://github.com/KKerne/htlrbl32l/blob/SDK/Examples/Applications/HTLRBL32L-AT-Commands/Documentation/LoRa_error_codes.png)
+
 | **Code** | **Description**            |
 | -------- | -------------------------- |
 | 0x00     | No errors                  |
