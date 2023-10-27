@@ -17,13 +17,13 @@ There are three configuration options that need to be addressed in the preproces
 
 > Right click on the project -> Properties -> C/C++ Build -> Settings -> GCC C Compiler -> Preprocessor
 
- (pic)
+![Preprocessor](https://github.com/KKerne/htlrbl32l/blob/SDK/Examples/Applications/LoRaWAN-Base/preprocessor.png)
 
 #### Modes of operation
 
- •	OVER_THE_AIR_ACTIVATION: 1 for OTAA (Over the Air Activation) and 0 for ABP (Activation by Personalization)
- •	HT_CRYPTO: Its definition enables/disables the use of the HT Crypto library and secure element (if your hardware version supports it)  
- •	DEFAULT_REGION: Region specification based on the document RP002-1.0.2 LoRaWAN® Regional Parameters. The pre-certified available options are on the table bellow.
+ -	OVER_THE_AIR_ACTIVATION: 1 for OTAA (Over the Air Activation) and 0 for ABP (Activation by Personalization)
+ -	HT_CRYPTO: Its definition enables/disables the use of the HT Crypto library and secure element (if your hardware version supports it)  
+ -	DEFAULT_REGION: Region specification based on the document RP002-1.0.2 LoRaWAN® Regional Parameters. The pre-certified available options are on the table bellow.
 
 | **Value** | **Region** |
 | --------- | ---------- |
@@ -54,17 +54,17 @@ Follow the project path and open the file according to your region:
 
 The function RegionUS915InitDefaults or RegionAU915InitDefaults, depending on your region, has a channel mask, that must be configured accordingly:
 
-(pic)
+![Channel Mask](https://github.com/KKerne/htlrbl32l/blob/SDK/Examples/Applications/LoRaWAN-Base/Default_channel_mask.png)
 
 Each bit of the mask corresponds as an enabled channel and each array index holds 16 channels, on Figure 1 you can see that only channels 0 to 7 are enabled (0x00FF= 0000 0000 1111 1111). 
 
 The same rule applies for array indexes 1 to 5. FIGURE 2 has enabled channels 24 to 31 (0xFF00= 1111 1111 0000 0000).  while disabled all others. 
 
-(pic)
+![Channel Config](https://github.com/KKerne/htlrbl32l/blob/SDK/Examples/Applications/LoRaWAN-Base/Channel_config_example.png)
 
 Through this method you can set any combination of channels you require.
 
-The channel number and frequency are available on the XXX [url to chanel doc] file.
+The channel number and frequency are available on [Channel Configuration](https://github.com/KKerne/htlrbl32l/blob/SDK/Examples/Applications/HTLRBL32L-AT-Commands/Documentation/Channel_config.md) file.
 
 ## Custom Payload Transmission
 
@@ -72,7 +72,6 @@ On this application, an uplink with a generic message is sent every 15 seconds. 
 The function is located on the “lorawan_setup.c” file. 
 After you call this function the LoRaWAN state machine is set in motion which will that care of the TX and RX processes.
 
-(pic)
 
 ## Max Payload
 
@@ -96,19 +95,19 @@ Note that the maximum value might be a little smaller depending on if some addit
 The UART interface can be used by connecting the pins TX(PA9) and RX(PA8) to a USB-Serial converter and connecting to a computer or simply connecting it to another microcontroller with a UART interface.
 
 UART configuration required to connect:
-•	Baud rate: 115200
-•	Data bits: 8
-•	Stop bits: 1
-•	Parity: none
-•	Flow Control: none
-•	Transmitted text: Append LF
+-	Baud rate: 115200
+-	Data bits: 8
+-	Stop bits: 1
+-	Parity: none
+-	Flow Control: none
+-	Transmitted text: Append LF
 
 ### Termite Setup
 
 One of the most widely used software for UART communication using a computer is Termite.
 The required configurations to use it are shown bellow.
 
-(pic)
+![Termite Setup](https://github.com/KKerne/htlrbl32l/blob/SDK/Examples/Applications/LoRaWAN-Base/Termite_Setup.png)
 
 
 
