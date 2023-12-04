@@ -35,3 +35,7 @@ Designed and manufactured in Brazil, the chip (iMCP HTLRBL32L) uses two communic
 ## Interested in our device?
 
 Please contact our commercial department: imcp@htmicron.com.br
+
+## Support
+
+If you require technical support, please submit a ticket [here](https://forms.clickup.com/30922216/f/xfnf8-16347/KBY0CL3SXRGB73D0GR).
