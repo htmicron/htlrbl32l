@@ -3,8 +3,8 @@ Performs the join procedure, exchanging keys required to communicate with the ne
 
 | **Command**     | **Parameter** | **Description**      |
 | --------------- | ------------- | -------------------- |
-| AT+JOIN=<param> |               | Sends a join request |
-| AT+JOIN?        |               | Return join status   |
+| AT+NWKJOIN=<param> |               | Sends a join request |
+| AT+NWKJOIN?        |               | Return join status   |
 
 ## Send Payload (string)
 
