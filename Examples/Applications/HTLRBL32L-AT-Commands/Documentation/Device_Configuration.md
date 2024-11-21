@@ -86,9 +86,9 @@ Delay between Tx and opening the Rx1 and Rx2 windows during activation (used by 
 
 | **Command**             | **Parameter**        | **Description**                   |
 | ----------------------- | -------------------- | --------------------------------- |
-| AT+JOINDELAYRX1=<param> | Time in microssecond | Sets the join delay on the RX1    |
+| AT+JOINDELAYRX1=<param> | Time in milliseconds | Sets the join delay on the RX1    |
 | AT+JOINDELAYRX1?        |                      | Returns the join delay on the RX1 |
-| AT+JOINDELAYRX2=<param> | Time in microssecond | Sets the join delay on the RX2    |
+| AT+JOINDELAYRX2=<param> | Time in milliseconds | Sets the join delay on the RX2    |
 | AT+JOINDELAYRX2?        |                      | Returns the join delay on the RX2 |
 
 
@@ -98,9 +98,9 @@ Delay between Tx and opening the Rx1 and Rx2 windows during regular execution
 
 | **Command**         | **Parameter**        | **Description**              |
 | ------------------- | -------------------- | ---------------------------- |
-| AT+DELAYRX1=<param> | Time in microssecond | Sets the delay on the RX1    |
+| AT+DELAYRX1=<param> | Time in milliseconds | Sets the delay on the RX1    |
 | AT+DELAYRX1?        |                      | Returns the delay on the RX1 |
-| AT+DELAYRX2=<param> | Time in microssecond | Sets the delay on the RX2    |
+| AT+DELAYRX2=<param> | Time in milliseconds | Sets the delay on the RX2    |
 | AT+DELAYRX2?        |                      | Returns the delay on the RX2 |
 
 ### RX Window Duration
@@ -109,7 +109,7 @@ Sets the duration in which the Rx windows stay open (regular and join procedure 
 
 | **Command**           | **Parameter**        | **Description**                 |
 | --------------------- | -------------------- | ------------------------------- |
-| AT+RXDURATION=<param> | Time in microssecond | Sets the duration RX stays open |
+| AT+RXDURATION=<param> | Time in milliseconds | Sets the duration RX stays open |
 | AT+RXDURATION?        |                      | Returns the set duration        |
 
 ### TX Power
